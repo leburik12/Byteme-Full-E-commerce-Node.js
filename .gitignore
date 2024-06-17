@@ -1,0 +1,6 @@
+db/
+systemdesign/
+frontend/
+backend/node3/.env
+backend/node3/node_modules/*
+no.txt

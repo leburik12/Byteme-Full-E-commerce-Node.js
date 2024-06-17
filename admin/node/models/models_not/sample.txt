@@ -1,0 +1,139 @@
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../path/to/your/sequelize/instance'); // Adjust the path to your Sequelize instance
+
+class LukupCategory extends Model {
+  static associate(models) {
+    // Define self-referencing association
+    this.hasMany(models.LukupCategory, {
+      as: 'SubCategories',
+      foreignKey: 'id_parent_category',
+    });
+
+    this.belongsTo(models.LukupCategory, {
+      as: 'ParentCategory',
+      foreignKey: 'id_parent_category',
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE', // Optional: Define what happens on delete
+    });
+  }
+}
+
+LukupCategory.init({
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  id_parent_category: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'LukupCategory', // Reference the same table
+      key: 'id',
+    },
+    onUpdate: 'CASCADE',
+    onDelete: 'CASCADE', // Optional: Define what happens on delete
+  },
+  name: {
+    type: DataTypes.STRING(30),
+    allowNull: false,
+  },
+  type: {
+    type: DataTypes.SMALLINT, // Assuming type is an integer representing different categories
+  },
+  media_url: {
+    type: DataTypes.STRING(200),
+  },
+  upload_date: {
+    type: DataTypes.DATE,
+    defaultValue: DataTypes.NOW,
+  },
+  update_date: {
+    type: DataTypes.DATE,
+  },
+}, {
+  sequelize,
+  modelName: 'LukupCategory',
+  tableName: 'lukup_categories', // Adjust if your table name differs
+  timestamps: false,
+});
+
+module.exports = LukupCategory;
+
+Fetching Child Categories
+async function getCategoryWithChildren(categoryId) {
+  const category = await LukupCategory.findByPk(categoryId, {
+    include: [{
+      model: LukupCategory,
+      as: 'SubCategories',
+      hierarchy: true,
+    }]
+  });
+  return category;
+}
+
+Fetching Parent Categories
+getCategoryWithChildren(1).then(category => {
+  console.log(JSON.stringify(category, null, 2));
+});
+
+async function getCategoryWithParents(categoryId) {
+  const category = await LukupCategory.findByPk(categoryId, {
+    include: [{
+      model: LukupCategory,
+      as: 'ParentCategory',
+      hierarchy: true,
+    }]
+  });
+  return category;
+}
+
+getCategoryWithParents(1).then(category => {
+  console.log(JSON.stringify(category, null, 2));
+});
+
+Full Example Usage
+This example demonstrates fetching a category along with its parent and child categories:
+
+async function getCategoryHierarchy(categoryId) {
+  const category = await LukupCategory.findByPk(categoryId, {
+    include: [
+      { model: LukupCategory, as: 'SubCategories', hierarchy: true },
+      { model: LukupCategory, as: 'ParentCategory', hierarchy: true },
+    ]
+  });
+  return category;
+}
+
+getCategoryHierarchy(1).then(category => {
+  console.log(JSON.stringify(category, null, 2));
+}).catch(error => {
+  console.error('Error fetching category hierarchy:', error);
+});
+
+State.belongsTo(Country, {
+    foreignKey: {
+        name: 'countryId', // Name of the foreign key column
+        type: DataTypes.INTEGER, // Data type of the foreign key column
+        allowNull: false, // Whether the foreign key column allows null values
+        defaultValue: 1, // Default value for the foreign key column
+        onDelete: 'CASCADE', // Action to take when a referenced row in the target table is deleted
+        onUpdate: 'CASCADE', // Action to take when the referenced column in the target table is updated
+        comment: 'Foreign key to reference the country table', // Comment for the foreign key column
+        primaryKey: true, // Whether the foreign key column is a primary key
+        unique: true, // Whether the foreign key column must be unique
+        references: { // Target table and column to which the foreign key column refers
+            model: 'Country',
+            key: 'id'
+        },
+        deferrable: true, // Whether the constraints on the foreign key column can be deferred
+        constraints: false, // Additional constraints for the foreign key column
+        match: 'SIMPLE', // Matching behavior for the foreign key column
+        validate: { // Validation rules for the foreign key column
+            isNumeric: true
+        }
+    },
+    as: 'country'
+});
+
+
+

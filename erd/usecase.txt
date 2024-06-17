@@ -1,0 +1,2237 @@
+Event
+
+Use Case Name : Register as a user           ID : 18         Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User 
+      Interest:  Wants to create an account on the in byteme platform to access features such as purchasing products,managing orders,
+                register for events,buy tickets,order meal, buy a book and personalized recommendations.
+    byteme system
+       Interest: Aims to onboard new users to expand its user base and increase engagement on the platform.
+Description :
+   This use case describes the process by which a user creates a new account on the byteme to gain access to its features and services.
+Pre-Conditions :
+    byteme system is accessible and functional.
+    The user has access to the internet and a compatible device (e.g., computer, smartphone).
+    The user agrees to the platform's terms of service and privacy policy.
+Triggers :
+    The user accesses the byteme system website or mobile app and initiates the registration process
+Basic Flow : 
+    User navigates to the registration page on the byteme system website or mobile app.
+    User fills out the registration form, providing necessary information 
+    Verify Email Address or phone number
+    The platform processes the registration information and creates a new user account in its database.
+    Optionally, the platform may automatically log the user into their newly created account, or the user can log in manually using their credentials.
+
+
+Use Case Name : Creat Event             ID : 1                  Importance Level : High 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+        Event organizer 
+           interest - Efficiently manage events, streamline workflows, attract attendees, ensure smooth execution, and generate revenue.
+           description - Event organizers are the primary users of the software. They are interested in a user-friendly interface that allows them to create event.
+        Attendees 
+           Interests - Discovering events of interest, easy registration process, access to event information, smooth check-in experience, engaging content during the event.
+           Description - Attendees are interested in finding relevant events easily, registering for them hassle-free, and accessing all necessary information such as event agenda, 
+                        location details, and speaker bios
+        Administrators/Managers 
+           Interests - Oversight of all events, data security, customization options, reporting and analytics.
+           Description: Administrators or managers oversee the overall operation of the event organizing software.
+                        They are interested in features that provide them with visibility into all events,
+                        ensure data security and compliance, allow for customization to meet specific needs,
+                        facilitate financial management including payment processing and invoicing, and provide 
+                        comprehensive reporting and analytics for decision-making purposes.
+Brief Description :
+        The "Create Event" use case is a fundamental function for our system byteme.com.
+        It allows event organizers to create and manage their events efficiently,
+        from setting up the event details to customizing the event page and managing ticket sales.
+Pre Conditions :
+    The event organizer has a valid account on the event management system.
+    The event organizer has the necessary permissions to create events.
+Triggers: The event organizer decides to create a new event
+Basic Flow : 
+    The event organizer creates an event orgranizer account in the system
+    The event organizer logs in to their account.
+    The event organizer fills in the basic event details, such as event name, date, time, location, and description.
+    The event organizer sets up the event categories, tags, and keywords for better searchability.
+    The event organizer customizes the event page by adding images, videos, and other multimedia content.
+    The event organizer sets up the ticketing options, including ticket types, prices, and availability
+    The event organizer manages the event schedule, including adding sessions, speakers, and sessions
+    The event organizer manages the event logistics, including venue selection, catering, and transportation
+    The event organizer reviews and confirms the event details before publishing the event
+
+
+Use Case Name : Update Event             ID : 2                 Importance Level : Medium 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event organizer 
+        interest -  update the event details with new information.
+        description - update the existing event with a new information on event location,date and time, price 
+    Attendees 
+           Interests - Their interest is to receive accurate and up-to-date information about the event
+           Description - Attendees rely on event organizers to provide updated information about events they have registered for or are interested in attending.
+                         They may be interested in receiving notifications or alerts about changes to event dates, times, or locations to avoid any inconvenience.
+    Administrators/Managers 
+           Interests - Their interest is to ensure that the system is updated correctly and that the data remains consistent and accurate
+           Description: They are interested in monitoring the updating process to ensure that changes are made accurately, and system integrity is maintained
+Brief Description : Update an existing event with new information.
+Pre Conditions : The event exists in the system
+Triggers : The event organizer needs to make changes to an existing event.
+Basic Flow : 
+    The event organizer initiates the update event process.
+    The system retrieves the existing event details
+    The event organizer enters the updated information
+    The system validates the updated information
+    The system updates the event with the new information
+    The system confirms the update to the event organizer
+
+
+Use Case Name : Delete Event             ID : 3                 Importance Level : Medium 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event organizer 
+        interest -   Maintain an organized and up-to-date list of events, ensuring that only relevant and necessary events are displayed to attendees
+        description - They might also be interested in analyzing trends and feedback related to events.
+    Attendees 
+           Interests -  Access accurate and current information about upcoming events
+           Description -  They might also want to remove events they are no longer interested in or cannot attend from their personal schedules.
+    Administrators/Managers 
+           Interests -  Maintaining the integrity and efficiency of the event organization system by overseeing the deletion process
+           Description: They are responsible for ensuring that proper procedures are followed and that the system is functioning correctly.
+           They may also be interested in tracking deletion activities for auditing and reporting purposes.
+Brief Description :  Delete an existing event from the system.
+Pre Conditions : The event exists in the system and the event organizer has the necessary permissions to delete it.
+Triggers : The event organizer decides to delete an existing event
+Basic Flow:
+    The event organizer initiates the delete event process
+    The system retrieves the existing event details
+    The system prompts the event organizer to confirm the deletion
+    The event organizer confirms the deletion
+    The system removes the event from the system
+    The system confirms the deletion to the event organizer.
+
+Exceptions:
+    -If the event cannot be deleted due to technical or system issues, the system may display an error message and prompt the event organizer to contact support.
+    -If the event organizer attempts to delete an event that does not exist, the system may display an error message and prompt them to check the event details.
+    -If the event organizer attempts to delete an event that is in progress or has already ended, the system may display an error message and prompt them to contact support.
+    -If the event organizer attempts to delete an event that has associated orders or transactions, the system may display an error message and prompt them to issue refunds or cancel the orders before deleting the event.
+    -If the event organizer attempts to delete an event that is part of a series or recurring event, 
+     the system may display an error message and prompt them to delete the entire series or just the individual event.
+
+
+Use Case Name : Search Event             ID : 4               Importance Level : High 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+   Event Attendees
+       Interests: Find relevant events quickly based on their preferences (date, location, type, etc.).
+    Event Organizers
+       Interests: Ensure their events are discoverable to the target audience.
+    System Administrators
+       Interests: Maintain the search functionality and ensure it performs efficiently and accurately.
+    Developers
+       Interests: Implement and maintain search algorithms and user interface efficiently.
+Brief description :
+    This use case allows users to search for events based on various criteria such as keywords, location, date, category, and more.
+Pre-conditions : 
+    The user must have access to the internet and the system management system (web or mobile app).
+    The event database must be populated with events.
+Triggers :
+    A user wants to find events and accesses the search feature of the event management system.
+Basic Flow :
+   The user navigates to the search page of the event management system.
+   The user enters keywords, selects filters (e.g., date, location, category), and submits the search query.
+   The system checks the validity of the input (e.g., correct date formats, existing locations).
+   The system processes the search query using its database and algorithms to find matching events.
+   The system displays a list of events matching the search criteria, sorted by relevance.
+   The user can click on an event to view more details, such as the event description, date, location, and organizer information.
+   The user either selects an event to proceed with registration or refines the search criteria for a new search
+Postconditions :
+   The user has a list of events matching their search criteria.
+   The user may have selected an event to view more details or to register.
+
+
+
+Use Case Name : Postpone Event             ID : 5               Importance Level : Medium 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event organizer 
+        interest -   Ability to reschedule events due to unforeseen circumstances or conflicts
+        description - 
+    Attendees 
+           Interests -  Being promptly informed about the new event dates to adjust their schedules accordingly.
+           Description -  They want clear communication about the reasons for the postponement and any changes to the event agenda or logistics.
+                      Attendees may also be interested in understanding if their registrations or tickets will remain valid for the rescheduled event.
+Brief Description :  The "Postpone Event" use case in the event organizing software system involves the process of rescheduling a planned event to a later date.
+                     This action is typically initiated in response to unforeseen circumstances or strategic decisions that require a change in the event schedule. 
+Pre Conditions :  An event has been scheduled and attendees have registered for it.
+                  However, due to unforeseen circumstances, the event organizer needs to postpone the event.
+Triggers : A situation arises that necessitates a change in the scheduled date or timing of an event
+Basic Flow : 
+   The event organizer logs into the software application and navigates to the event management dashboard.
+   The organizer selects the event that needs to be postponed and clicks on the "Postpone Event" button.
+   The software application prompts the organizer to enter the new date and time for the event.
+   The organizer enters the new date and time and clicks on the "Save" button.
+   The software application updates the event details and sends out an email notification to all registered attendees informing them of the new date and time.
+   The email notification includes a link to the updated event page on the software application's website.
+   Attendees receive the email notification and can click on the link to view the updated event details.
+   The software application also updates any calendar invitations that were sent out to attendees with the new date and time.
+Postconditions: The event has been successfully postponed and all registered attendees have been notified of the new date and time.
+
+Use Case Name : Create ticket              ID : 6               Importance Level : Medium 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event organizer 
+        interest -   Ensuring that their events are easily discoverable by potential attendees
+        description -  Organizers want their events to appear in search results based on relevant criteria to maximize attendance and engagement.
+    Attendees 
+           Interests -  Finding events that match their interests, preferences, and availability.
+           Description -  Attendees want a user-friendly search function that allows them to discover relevant events easily.
+    Event Management Professionals 
+         Interest - Identifying industry-specific events, conferences, or workshops for networking and professional development opportunities. 
+         Description - They want to search for events that offer relevant content and networking opportunities within their field.
+Brief Description : The "Search Event" functionality allows users to access a search interface where they can input their desired parameters to find relevant events. 
+                   Users may input various search criteria such as event type (e.g., conference, concert, workshop), 
+                   location, date range, keywords, or specific categories/tags. 
+Pre Conditions :  The search criteria are provided and meet the expected format.
+        The system or database being searched is operational and accessible.
+        The search is performed within a specified timeframe if applicable.
+Triggers : The search_event use case can be triggered by various user actions, such as:
+            The user enters a search query in the search bar and clicks the "Search" button.
+            The user selects a set of filters and clicks the "Apply" button to search for events that match the selected criteria.
+            The user sorts the list of events by a specific field, such as date or location, and clicks the "Sort" button to view the events in the sorted order.
+            The user selects a specific timeframe, such as "Past week" or "Next month", to search for events that occurred or will occur within that timeframe.
+            The user selects a specific event source, such as "Web" or "Mobile", to search for events that originated from that source.
+Basic Flow : 
+        The user accesses the search interface of the system.
+        The user enters the search criteria in the appropriate fields.
+        The user initiates the search by clicking on the search button or pressing enter.
+        The system receives the search request and validates the input criteria.
+        The system searches the database or external systems for events that match the search criteria.
+        The system retrieves the relevant events and sorts them based on the specified order.
+        The system displays the search results to the user, including the event title, date, time, and other relevant information.
+        The user reviews the search results and interacts with the system to view more details, filter, or sort the results.
+
+
+Use Case Name : Update ticket              ID : 7             Importance Level : Medium 
+Primary Actor : Event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event Organizer
+        Interest: Ability to manage and update tickets for their events, including changing ticket prices, quantities, and descriptions.
+    Event Attendee
+         Interest: To have accurate and up-to-date information about ticket options and availability
+    System Administrator
+         Interest: Ensure the system functions smoothly and securely, and that updates are tracked for audit purposes
+    Customer Support
+         Interest: Assist event organizers and attendees with any issues related to ticket updates
+Brief Description : 
+    Description: Allows an event organizer to modify details of an existing ticket for an event. 
+    This can include changing the price, quantity, description, and other attributes.
+Preconditions : 
+    The event organizer must be logged into the system.
+    The event for which the ticket is being updated must already exist.
+    The ticket to be updated must exist
+Triggers : 
+     The event organizer selects the option to update a ticket from their systems management dashboard.
+Basic Flow :
+    Organizer logs in: The event organizer logs into the event management system.
+    Select event: The organizer navigates to the event for which they want to update a ticket.
+    Select ticket: The organizer selects the specific ticket they wish to update.
+    Update ticket details: The system displays the current ticket details. The organizer makes the desired changes to the ticket information (e.g., price, quantity, description).
+    Save changes: The organizer submits the updated ticket information.
+    System validation: The system validates the changes (e.g., ensures the new price is a valid number, the quantity is an integer, etc.).
+    Update in database: The system updates the ticket information in the database.
+    Confirmation: The system confirms that the ticket has been successfully updated.
+    Notification: Optionally, the system can notify attendees who have already purchased the ticket about the changes, if applicable.
+Postconditions : 
+    The ticket information is updated in the system.
+    The updated ticket details are reflected in the event listing.
+    Any associated systems (e.g., payment processing, attendee notifications) are updated accordingly.
+
+
+Use Case Name : Cancel ticket            ID : 8            Importance Level : Medium 
+Primary Actor : Event Attendee        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Attendees 
+       Interest: Ability to cancel a ticket easily, receive a refund or credit if applicable, and have clarity on cancellation policies.
+    Event Organizers
+       Interest: Manage attendee lists, handle cancellations efficiently, and enforce cancellation policies.
+    System Administrators
+        Interest: Ensure the system handles cancellations correctly, maintain data integrity, and support users in case of issues.
+    Customer Support 
+        Interest: Assist users with cancellation issues, provide information about cancellation policies, and manage disputes.
+    Payment Processors
+        Interest: Handle refund transactions smoothly, ensure secure processing of financial data, and manage disputes.
+Brief Description :
+    This use case describes the process by which an event attendee can cancel their ticket for an event through the event management system.
+Preconditions :
+    The event attendee must be logged into the event management system.
+    The attendee must have an existing valid ticket for the event they wish to cancel.
+Triggers :
+    The event attendee decides they can no longer attend the event and initiates a cancellation request via the system.
+Basic Flow :
+    The attendee navigates to the "My Tickets" section of their account.
+    The attendee selects the ticket they wish to cancel.
+    The attendee clicks on the "Cancel Ticket" button.
+    The system displays the event's cancellation policy and any applicable refund or credit information.
+    The attendee confirms their intention to cancel by clicking "Confirm Cancellation."
+    The system verifies the ticket's eligibility for cancellation based on the event's cancellation policy.
+    The system updates the ticket status to "Cancelled."
+    If applicable, the system processes a refund or issues a credit to the attendee's account according to the event's cancellation policy.
+    The system sends a cancellation confirmation email to the attendee. 
+    The system notifies the event organizer of the cancellation.
+    The system updates the attendee list to reflect the cancellation.
+    The system logs the cancellation in the transaction history.
+Post Conditions: 
+    The ticket status is updated to "Cancelled."
+    A refund or credit is issued if applicable.
+    The event attendee receives a confirmation of the cancellation.
+    The event organizer is notified of the cancellation.
+    System records are updated to reflect the change.
+Extensions : 
+    E1: Ticket Not Eligible for Cancellation
+      The system informs the attendee that the ticket is not eligible for cancellation based on the event's policy.
+      The attendee is provided with options (e.g., contacting customer support for further assistance).
+    E2: Partial Refund Policy
+        If the event's policy allows only partial refunds, the system calculates the appropriate refund amount.
+        The attendee is informed of the partial refund amount before confirming the cancellation
+    E3: Cancellation Within Non-Refundable Period
+        If the cancellation is requested within a non-refundable period as per the event's policy, the system notifies the attendee that no refund will be issued.
+        The attendee can still choose to cancel without receiving a refund
+
+
+Use Case Name : Register for an event              ID : 9           Importance Level : Medium 
+Primary Actor : Event Attendee        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event Attendee 
+        Wants to easily find and register for events of interest
+        Requires confirmation of registration and a ticket (digital or physical)
+    Event Organizer
+        Seeks to manage registrations efficiently
+        Needs access to attendee information for event planning and communication.
+    byteme System
+        Aims to provide a seamless user experience for both attendees and organizers.
+        Needs to ensure secure handling of payment and personal data.
+    Payment Processor
+        Facilitates secure and efficient transaction processing.
+        Ensures compliance with financial regulations and standards
+Brief Description : 
+     This use case describes the process by which an Event Attendee registers for an event through the byteme system.
+Pre-Conditions :
+    The user (Event Attendee) has access to the system.
+    The user has an account or is willing to create one.
+    The event is available for registration (not sold out or past registration deadline).
+    Payment system is operational (for paid events).
+Triggers :
+    The user decides to register for an event after finding it on the platform
+Basic Flow :
+    User browses or searches for the event.
+    System displays a list of events matching the search criteria.
+    User selects an event from the list.
+    System displays event details including date, time, location, and registration fee (if applicable)
+    User clicks on the "Register" button.
+    System prompts the user to log in or create an account.
+    User logs in with existing credentials or creates a new account
+    System authenticates user or creates a new user account
+    User selects ticket type and quantity
+    User provides necessary details (name, contact information, etc.).
+    System verifies the information and displays the summary.
+    User provides payment information
+    System processes the payment through a secure payment gateway
+    System confirms registration and sends a confirmation email with ticket details.
+    User can view the registration confirmation and ticket in their account.
+Postconditions : 
+    User is registered for the event.
+    User receives a confirmation email with ticket details.
+    Event organizer receives attendee registration information.
+    Payment is processed and confirmed (for paid events).
+Extensions : 
+    E1 : Event Full
+        Condition: Event reaches full capacity during the registration process.
+        Flow:
+            System notifies the user that the event is full and registration cannot be completed.
+            User may choose to join a waitlist or browse other events.
+
+
+Use Case Name : Transfer a ticket              ID : 10           Importance Level : Medium 
+Primary Actor : Event Attendee        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Event Attendee :
+        Wants to transfer their ticket to another person easily and securely.
+        Requires confirmation that the transfer was successful.
+    Recipient of the Ticket
+        Wants to receive the transferred ticket without any issues.
+        Requires confirmation and details of the event.
+    Event Organizer
+        Needs to keep track of who holds the tickets for accurate attendee information.
+        Requires notification of any ticket transfers.
+    byteme System
+        Aims to facilitate a seamless and secure ticket transfer process
+        Needs to ensure the integrity of ticket information and compliance with any transfer policies.
+Breif Description : 
+    This use case describes the process by which an Event Attendee transfers their event ticket to another person through the event management system.
+Pre-Conditions :
+    The original ticket holder (Event Attendee) has access to their account on the byteme system.
+    The ticket is eligible for transfer (not restricted by event organizer policies).
+    The recipient has or is willing to create an account on the event management system.
+Triggers :
+    The original ticket holder decides to transfer their ticket to another person.
+Basic Flow :
+    Original ticket holder logs into their account.
+    Navigates to "My Tickets" or equivalent section.
+    Selects the ticket they wish to transfer.
+    Original ticket holder enters the recipient’s email address and any other required information.
+    System verifies that the ticket is eligible for transfer.
+    System displays the transfer details for confirmation.
+    Original ticket holder confirms the transfer.
+    System sends an email to the recipient with a link to accept the ticket.
+    System sends a confirmation email to the original ticket holder.
+    Recipient receives the email and clicks on the link.
+    Recipient logs into their account or creates a new account.
+    System associates the ticket with the recipient’s account.
+    System sends a confirmation email to the recipient with the ticket details.
+    The ticket is marked as transferred in both accounts.
+Postconditions : 
+    The ticket is successfully transferred to the recipient.
+    Both the original ticket holder and the recipient receive confirmation emails.
+    Event organizer’s records are updated with the new ticket holder information.
+Extensions :
+    E1: Ticket Not Eligible for Transfer
+        Condition: The ticket is restricted from being transferred.
+        Flow:
+            System displays a message indicating the ticket cannot be transferred.
+            Original ticket holder may contact support or review event policies.
+    E2: Recipient Does Not Accept Ticket:
+        Condition: Recipient does not accept the ticket within a specified time frame.
+        Flow:
+            System sends a reminder email to the recipient.
+            If the recipient still does not accept, the transfer is canceled and the original ticket holder is notified.
+
+
+Use Case Name : Manage ticket Sales             ID : 11           Importance Level : Medium 
+Primary Actor : Event Organizer        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+        Event Organizer (Primary Stakeholder)
+            Wants to efficiently manage ticket sales for their event.
+            Requires tools to track sales, set pricing, and manage inventory.
+        Event Attendees
+            Want a seamless and user-friendly process to purchase event tickets.
+            Require clear information on ticket availability, pricing, and seating.
+        Byteme system 
+            Aims to provide organizers with robust ticket management tools.
+            Ensures a smooth user experience for attendees during ticket purchase.
+Brief Description : 
+    This use case describes the process by which an Event Organizer manages ticket sales for their event through the event management system.
+Pre-Conditions
+        Event organizer has access to their account on the system.
+        The event details (date, time, location, etc.) are properly set up.
+        Ticket types, pricing, and inventory are defined.
+Triggers :
+        The event organizer decides to initiate or modify ticket sales for their event or see the sales statistics and analytics.
+Basic Flow :
+    Event organizer logs into their account on the event management system.
+    Navigates to the event dashboard or ticket management section.
+    Event organizer defines the types of tickets available (e.g., general admission, VIP, early bird).
+    Specifies pricing, quantity available, and any restrictions (e.g., age, group discounts)
+    Event organizer monitors ticket sales in real-time.
+    Adjusts inventory levels for each ticket type as needed.
+    Receives notifications when ticket availability reaches specified thresholds.
+    Event organizer accesses sales reports and analytics.
+    Tracks revenue, ticket sales by type, geographic distribution of attendees, etc.
+    Uses this data to make informed decisions about marketing and event planning.
+    Handles refund requests or ticket exchanges from attendees.
+    Initiates refunds or issues new tickets as appropriate.
+    Updates inventory and sales records accordingly.
+Postconditions
+    Ticket sales are effectively managed, and event organizer has visibility into sales data.
+    Attendees can purchase tickets seamlessly according to availability and pricing set by the organizer.
+    Payment transactions are processed securely and accurately.
+
+
+Use Case Name : feedback on an Event             ID : 12           Importance Level : High 
+Primary Actor : Event Attendees        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Attendee
+        Wants to provide feedback on their experience at the event.
+        May have suggestions for improvement or comments on specific aspects of the event.
+    Event Organizer
+        Interested in receiving feedback to evaluate the success of the event.
+        Requires insights to improve future events and address any issues raised by attendees.
+    Byteme System
+        Aims to facilitate the feedback process for both attendees and organizers.
+        Needs to ensure the secure handling of feedback data and effective communication between parties.
+Brief Description :
+    This use case describes the process by which an byteme Attendee provides feedback on an event through the system.
+Pre-Conditions : 
+    Event attendee has attended the event and has access to their account on the event management system.
+    The event has concluded, and the feedback submission period is open.
+    Feedback submission form is available and accessible.
+Triggers :
+    Event attendee decides to submit feedback after attending the event.
+Basic Flow :
+    Event attendee logs into their account on the byteme system.
+    Navigates to the event page or feedback section.
+    Event attendee selects the event they wish to provide feedback on.
+    System displays the feedback submission form for that event.
+    Event attendee fills out the feedback form, providing ratings and comments on various aspects of the event.
+    Aspects may include overall satisfaction, venue, organization, speakers, content, etc.
+    Event attendee reviews the feedback provided.
+    Submits the feedback form.
+    System confirms successful submission of feedback.
+
+
+Use Case Name : Follow an Organizer             ID : 13           Importance Level : High 
+Primary Actor : Event Attendees        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Attendee
+        Wants to stay updated on events organized by a specific organizer.
+        Requires a convenient way to receive notifications or updates about upcoming events.
+    Event Organizer
+        Interested in building a following of attendees who are interested in their events.
+        Requires a means to communicate with followers and promote upcoming events effectively.
+    Byteme System
+        Aims to facilitate the connection between event attendees and organizers.
+        Needs to provide features for attendees to follow organizers and receive updates.
+Breif Description
+    This use case describes the process by which an Event Attendee follows an organizer 
+    through the event management system to stay updated on their upcoming events.
+Pre-Conditions :
+    Event attendee has access to their account on the system.
+    The organizer has events listed on the platform.
+    The event attendee has found an organizer they wish to follow.
+Triggers :
+    Event attendee decides to follow an organizer after attending one of their events or discovering their profile on the platform.
+Basic Flow : 
+    Event attendee navigates to the organizer's profile on the event management system.
+    This may be done through search, browsing categories, or recommendations.
+    Event attendee clicks on a "Follow" or equivalent button on the organizer's profile.
+    System registers the request to follow the organizer.
+    System confirms that the attendee has successfully followed the organizer.
+    Optionally, the system may provide a confirmation message or notification.
+    Event attendee now receives updates, notifications, or newsletters about upcoming events organized by the followed organizer.
+    Updates may include new event announcements, ticket sales, special promotions, etc.
+Postconditions : 
+    Event attendee is successfully following the organizer.
+    Event attendee receives updates and notifications about upcoming events organized by the followed organizer.
+    Organizer gains a follower and potentially increases attendance at their events.
+
+
+Use Case Name : get nearby events             ID : 14           Importance Level : High 
+Primary Actor : Event Attendees        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Attendee 
+        Wants to discover events happening nearby for easy access and convenience.
+        Requires a way to filter and explore events based on location and interests.
+    Event Organizer
+        Interested in reaching potential attendees in the vicinity of their event location.
+        Requires visibility in nearby event listings to attract local attendees.
+    byteme System
+        Aims to provide event attendees with a feature to easily discover and attend nearby events.
+        Needs to efficiently match attendees with relevant events based on location and preferences.
+Brief Description: This use case describes the process by which an Event Attendee retrieves a
+                   list of nearby events through the event management system based on their current location or specified area.
+Pre-Conditions : 
+    Event attendee has access to the byteme system, either through a website or mobile app.
+    The byteme system has access to the attendee's location information (with their permission).
+    Nearby events feature is available and enabled.
+Triggers :
+    Event attendee initiates a search or exploration of events happening nearby.
+Basic Flow : 
+    Event attendee opens the byteme system on their device.
+    Navigates to the "Nearby Events" section or uses a location-based search feature.
+    If necessary, the system prompts the attendee to provide their current location or allows them to specify a location.
+    System queries the database for events within the specified area or proximity to the attendee's location.
+    Applies any additional filters or preferences set by the attendee (e.g., date, category).
+    System presents a list of nearby events matching the criteria.
+    Each event listing includes key details such as event name, date, time, location, and a brief description.
+    Event attendee can click on individual event listings to view more details.
+    Details may include event description, organizer information, ticket prices, and any special features or attractions.
+    Event attendee selects an event they are interested in attending from the list.
+Postconditions : 
+    Event attendee has successfully retrieved a list of nearby events matching their location and preferences.
+    Event details are displayed, allowing the attendee to explore and select events of interest.
+    Attendee may choose to attend the selected event or save it for later.
+Extensions :
+    E1: Location Permission Request:
+        Condition: Event management system does not have access to the attendee's location.
+        Flow:
+            System prompts the attendee to grant location permissions.
+            Attendee may choose to allow or deny access to their location.
+
+
+Use Case Name : Personlized event recommendations            ID : 15           Importance Level : High 
+Primary Actor : Event Attendees        Use Case Type : Primary Use Case
+Stakeholders and Interests :  
+    Event Attendee 
+        Wants personalized event recommendations tailored to their interests and preferences.
+        Requires relevant suggestions for events happening nearby for convenient access.
+    Event Organizer
+        Interested in reaching potential attendees who match the target audience for their events.
+        Requires effective promotion of events to attract attendees who are likely to be interested.
+    Byteme System
+        Aims to leverage AI algorithms to provide event attendees with personalized recommendations.
+        Needs to ensure accurate matching of attendees with events based on their preferences and location.
+Brief Description :
+    This use case describes the process by which an Event Attendee receives personalized
+    event recommendations based on their interests, preferences, and location through the Byteme system leveraging AI technology.
+Pre-Conditions : 
+    Event attendee has access to the byteme system, either through a website or mobile app.
+    The byteme system has access to attendee preferences and location data.
+    Personalized AI recommendation feature is available and enabled.
+Triggers :
+    Event attendee initiates a search or exploration of personalized event recommendations.
+Basic Flow :
+    Event attendee opens the event management system on their device.
+    Navigates to the search bar section or feature.
+    System prompts the attendee to specify their preferences, interests, and any relevant filters.
+    Attendee may input preferences such as event category, date range, ticket price, and location radius.
+    System utilizes AI algorithms to analyze attendee preferences and past behavior.
+    Recommends events that match the attendee's interests and are happening nearby.
+    System queries the database for events that align with the attendee's preferences and are within the specified location radius.
+    Applies AI-based recommendations to prioritize and customize the event list.
+    System presents a list of personalized event recommendations to the attendee.
+Postconditions
+    Event attendee has successfully received personalized event recommendations based on their preferences and location.
+    Recommended events are displayed, allowing the attendee to explore and select events of interest.
+
+
+Use Case Name : Similar event recommendations            ID : 16           Importance Level : High 
+Primary Actor : Event Attendees        Use Case Type : Primary Use Case
+Stakeholders and Interests :  
+    Event Attendee 
+        Wants to discover events similar to ones they have attended or shown interest in.
+    Event Organizer
+        Interested in reaching potential attendees who have demonstrated interest in similar events.
+    Byteme System
+        Aims to provide event attendees with recommendations for events similar to ones they have attended or shown interest in
+Breif Description: This use case describes the process by which an Event Attendee receives recommendations for events similar to ones 
+         shown interest through the byteme system.
+Triggers : 
+    Event attendee initiates a search or exploration of similar event recommendations.
+Basic Flow :
+    System queries the database for events that are similar to the ones the user is intereseted in.
+
+
+Use Case Name : customer/Attendee Data and Analytics           ID : 17           Importance Level : High 
+Primary Actor : Event Organizer        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Organizer
+        Wants insights into customer/attendee demographics, behavior, age range usage and preferences.
+        Requires data-driven decision-making to improve customer acuqistion, product planning ,event planning, marketing, and attendee satisfaction.
+    Byteme System
+        Aims to provide robust data analytics features to support store owners, retaurants , book stores , super&mini markets and event organizers.
+        Needs to ensure data privacy and compliance with regulations while delivering valuable insights.
+Breif Description:
+    This use case describes the process by which an store owners, retaurants , book stores , super&mini markets and event organizers utilizes attendee data and analytics tools 
+    provided by the byteme system to gain insights into customer/attendee behavior, demographics, preferences, and satisfaction levels.
+Pre-Conditions :
+    User must have privilege to view the data
+    store owners, retaurants , book stores , super&mini markets and event organizers has access to their account on the byteme system.
+    Customer/Attendees have provided consent for their data to be collected and analyzed.
+    Sufficient Customer/attendee data is available for analysis, including registration information, ticket sales, interactions, and feedback.
+Triggers :
+    store owners, retaurants , book stores , super&mini markets and event organizers initiates a request to access attendee data and analytics tools to gain insights for event planning and optimization.
+Basic Flow :
+    Navigates to the analytics dashboard or section dedicated to attendee data.
+    System presents various data metrics and visualizations related to attendee demographics, behavior, and engagement.
+    Metrics may include customer interaction with the store , attendance numbers, ticket sales, geographic distribution, age groups, interests, registration sources, and engagement levels.
+    store owners, retaurants , book stores , super&mini markets and event organizers examines custoemr/attendee demographics to understand the composition of their audience.
+    Identifies trends and patterns in age, gender, location, profession, and other relevant demographic factors.
+    store owners, retaurants , book stores , super&mini markets and event organizers reviews ticket sales data to assess the performance of different ticket types, pricing strategies, and promotional campaigns.
+    Analyzes revenue generated from product sales , ticket sales and identifies opportunities for optimization.
+    store owners, retaurants , book stores , super&mini markets and event organizers monitors attendee engagement metrics, such as website visits, social media interactions, and email opens.
+    receuve reviews attendee feedback and satisfaction scores from post-event surveys or reviews.
+    Identifies areas of improvement and satisfaction levels across different aspects of the event.
+Extensions :
+    Predictive Analytics and Forecasting:
+        Condition: store owners, retaurants , book stores , super&mini markets and event organizers wants to utilize predictive analytics to forecast attendance, ticket sales, and revenue for future sales/events.
+        Flow:
+            System leverages historical data and predictive models to forecast future product/event metrics.
+            store owners, retaurants , book stores , super&mini markets and event organizers uses forecasts to make informed decisions on budgeting, venue selection, and resource allocation.
+
+Use Case Name : Generate events Report           ID : 19           Importance Level : High 
+Primary Actor : Event Organizer        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Organizer
+        Interested in accessing comprehensive reports to evaluate event performance, attendee demographics, and financial metrics.
+    Byteme System
+        Aims to provide robust reporting features to meet the analytical needs of event organizers.
+        Needs to ensure that generated reports are accurate, customizable, and accessible within the platform.
+Breif Description: 
+    This use case describes the process by which an Event Organizer generates reports through the byteme system 
+    to analyze various aspects of event performance, attendee demographics, and financial metrics.
+Pre-Conditions :
+    must have the privilege to generate a report
+    Event organizer has access to their account on the event management system.
+    Sufficient data is available for the specified reporting period, including attendee information, ticket sales, revenue, and feedback.
+Triggers :
+    Event organizer initiates a request to generate a report to assess event performance or gather specific insights.
+Basic Flow :
+    Event organizer logs into their account on the event management system.
+    Navigates to the reporting or analytics section within the platform.
+    Event organizer specifies the parameters for the report, such as the reporting period, event(s) to include, and the type of data to be analyzed.
+    Parameters may include attendee demographics, ticket sales, revenue, feedback, or other custom metrics.
+    System processes the request and generates the report based on the specified parameters.
+    Report may be displayed as a dashboard, summary, or detailed document, depending on the selected parameters.
+    Event organizer analyzes the report insights to evaluate event performance, attendee demographics, and financial metrics.
+    Identifies trends, patterns, and areas for improvement based on the report findings.
+    Event organizer has the option to export the report in various formats (e.g., PDF, Excel) for further analysis or sharing with stakeholders.
+Postconditions :
+    Event organizer has successfully generated and analyzed a report to assess event performance, attendee demographics, and financial metrics.
+    Insights from the report can be used to inform decision-making for future event planning and optimization.
+
+
+Use Case Name : Register as a Seller           ID : 20           Importance Level : High 
+Primary Actor : Seller        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Seller
+        Interest: Wants to register as a seller on the byteme platform to list and sell products, manage orders, and grow their business.
+    byteme plaform 
+        Interest: Aims to onboard new sellers to increase the variety of products available on the platform and generate revenue through seller fees.
+Breif Description: 
+    This use case describes the process by which a seller creates a new seller account on the eCommerce platform to start selling products.
+Basic Flow :
+    User navigates to the seller registration page on the byteme platform's website or mobile app.
+    User fills out the seller registration form, providing necessary information
+    User reviews and agrees to the seller terms of service, policies, and any applicable fees or commissions.
+    User submits the completed seller registration form to the eCommerce platform.
+    The platform verifies the seller's information provided during registration, which may include verifying business documents or tax identification.
+    Upon successful verification, the platform approves the seller registration.
+    Optionally, the platform may provide access to a seller dashboard where the user can manage their seller account settings, listings, orders, and performance metrics.
+Postconditions :
+    Seller can now list products, manage orders, and access seller tools and features available on the platform.
+Extensions :
+    E1: Identity Verification:
+        Condition: Platform requires additional identity verification for certain seller categories or high-risk activities.
+        Flow :
+            After submitting the registration form, the platform prompts the seller to undergo additional identity verification.
+            Seller provides necessary documents or undergoes identity verification procedures as required by the platform.
+            Upon successful verification, the platform approves the seller registration.
+
+
+Use Case Name : Product Listing           ID : 21           Importance Level : High 
+Primary Actor : Seller        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Seller
+        Interest: Wants to list products on the byteme platform to reach potential buyers and generate sales revenue.
+    byteme platform 
+        Interest: Aims to provide a platform for sellers to list products, attract buyers, and facilitate transactions,
+         generating revenue through listing fees and commissions.
+Breif Description: 
+    This use case describes the process by which a seller lists products on the the platform to make them available for purchase by potential buyers
+Pre-Conditions :
+    Seller has a registered account on the eCommerce platform.
+    The seller agrees to comply with the platform's listing policies and guidelines.
+Triggers :
+    The seller initiates the product listing process through the seller dashboard or listing creation page on the platform.
+Basic Flow :
+    Seller navigates to the listing creation page on the eCommerce platform's seller dashboard.
+    Seller selects the appropriate category or subcategory for the product being listed from the available options provided by the platform.
+    Seller fills out the product details
+    Seller sets additional product attributes or variations, such as size, color, style, or other relevant options, depending on the product type and category.
+    Seller specifies listing preferences, such as:
+        Listing duration (for auction-style listings)
+        Quantity available (for fixed-price listings)
+    Seller reviews the listing details for accuracy and completeness.
+    If satisfied, the seller submits the listing to the eCommerce platform for review and publication.
+Extensions : 
+        E1: Promotional Features and Upselling:
+            Condition: Seller wants to promote listings and cross-sell or upsell related products.
+            Flow:
+                Platform offers promotional features such as sponsored listings, featured placements, or bundled deals.
+                Seller utilizes these features to increase visibility and drive sales of their listings.
+
+
+Use Case Name : Update Product           ID : 22           Importance Level : High 
+Primary Actor : Seller        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Seller
+        Interest: Wants to update product information.
+    byteme platform 
+        Interest: Aims to facilitate seamless product updates by providing sellers with tools 
+                and functionalities to maintain up-to-date product listings, enhancing user experience and platform credibility.
+Breif Description: This use case describes the process by which a seller updates the information associated with a 
+                product listing on the byteme platform, ensuring that the product details remain accurate and relevant.
+Pre-Conditions :
+    Seller has a registered account on the platform.
+    The seller has existing product listings on the platform that require updates.
+Triggers :
+    The seller identifies the need to update product information, such as price changes, 
+    stock availability, or product details, and initiates the update process through the
+     seller dashboard or listing management page on the eCommerce platform.
+Basic Flow :
+    Seller navigates to the listing management page or seller dashboard on the eCommerce platform.
+    Seller identifies the specific product listing that requires updates from the list of existing listings displayed on the management page.
+    Seller selects the option to edit the product listing and accesses the editing interface.
+    Seller modifies the relevant product information
+    Seller reviews the updated product information to ensure accuracy and completeness.
+    Once satisfied with the updates, the seller submits the changes to the eCommerce platform for review and approval.
+    The platform reviews the submitted changes to ensure compliance with listing policies and guidelines.
+    If the changes meet the platform's criteria, they are approved for publication.
+
+
+Use Case Name : Search Product           ID : 23           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        Interest: Wants to find specific products or browse available options efficiently to make informed purchasing decisions.
+    byteme platform
+        Interest: Aims to provide a robust search functionality to help users find products quickly and accurately, enhancing user experience and driving sales.
+Breif Description: 
+    This use case describes the process by which a user searches for products on the eCommerce platform 
+    to find relevant items based on their search queries and preferences.
+Pre-Conditions :
+    user submit a valid query
+    The platform's product database contains relevant and up-to-date product listings.
+Triggers :
+    The user initiates a product search by entering keywords or selecting search filters on the platform's search interface.
+Basic Flow :
+    User navigates to the search interface provided by the eCommerce platform, typically located on the homepage or in the header/navigation menu.
+    User enters keywords or phrases related to the desired product(s) into the search bar.
+    Optionally, the user may apply search filters (e.g., category, price range, brand) to refine their search results.
+    User submits the search query by pressing the "Search" button or hitting the Enter key.
+    The platform processes the search query and retrieves relevant product listings matching the user's search criteria.
+    The platform displays the search results to the user, typically in a list or grid format.
+Postconditions :
+    User has successfully searched for products on the platform and viewed relevant search results based on their query and preferences.
+    User can proceed to interact with specific product listings or continue browsing for additional products.
+
+Extensions : 
+    E1 : Advanced Search Filters:
+        Condition: User wants to apply advanced search filters to refine their search results further.
+        Flow:
+            Platform provides advanced search filter options using NLP.
+            User selects specific filter criteria to narrow down the search results and find products that meet their specific requirements.
+
+        
+Use Case Name : add product to cart           ID : 25           Importance Level : High 
+Primary Actor : Seller        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Seller
+        Interest: Wants to add products to their shopping cart for future purchase or to continue shopping before checkout.
+    byteme platoform
+        Interest: Aims to provide a seamless shopping experience by allowing users to add products to their cart easily, increasing user engagement and conversion rates.
+Breif description : 
+    escription: This use case describes the process by which a user adds a product to their shopping cart on the eCommerce platform,
+     allowing them to collect and manage items for purchase.
+    effectively removing it from the platform's marketplace and making it unavailable for purchase by users.
+    The platform displays a confirmation message to indicate that the product has been successfully added to the user's cart
+Basic Flow :
+    User navigates to the product detail page of the desired product by searching or browsing through the eCommerce platform.
+    User reviews the product details
+    User clicks on the "Add to Cart" button or similar action displayed on the product detail page to add the product to their shopping cart.
+
+Use Case Name : Add  Product to Send as a Gift           ID : 24           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User 
+        Interest: Wants to send a product as a gift to another recipient, either for a special occasion or as a gesture of goodwill.
+    Recipient
+        Interest: Receives the gift sent by the user and may have preferences or special instructions related to the gift delivery.
+Breif Description: This use case describes the process by which a user adds a product to their shopping cart on the
+                platform with the intention of sending it as a gift to another recipient, 
+                along with personalized messages or special instructions for gift delivery.
+Pre-Conditions :
+    User has access to the eCommerce platform and is logged into their account (if applicable).
+    User knows the recipient's address and any specific preferences or instructions for the gift delivery.
+Basic Flow :
+    User navigates to the product detail page of the desired product by searching or browsing through the eCommerce platform.
+    User indicates the intention to send the product as a gift by selecting the appropriate gift sending option provided on the product detail page.
+    This option may be labeled as "Send as Gift" or similar, and it typically triggers additional features for gift customization.
+    User provides the recipient's name, address, and any additional delivery instructions or special preferences for the gift delivery.
+    User clicks on the "Add to Cart" button or similar action to add the product to their shopping cart with the selected gift sending options enabled.
+    User reviews the selected gift sending options, recipient details, and product information to ensure accuracy and completeness
+    If satisfied, the user confirms their selection and proceeds to checkout to complete the gift sending process.
+Extensions:
+    E1: Gift Tracking and Notifications:
+        Condition: User wants to track the status of the gift delivery and receive notifications on delivery updates.
+        Flow:
+            Platform offers order tracking features and sends notifications to the user's registered email or mobile phone number regarding the status of the gift delivery.
+            User can monitor the progress of the gift delivery from processing to shipment to delivery, ensuring transparency and peace of mind.
+
+Use Case Name : generate sales report           ID : 26           Importance Level : High 
+Primary Actor : Seller        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Seller 
+        Interest: Wants to generate sales reports to analyze business performance, track sales trends, 
+        and make informed decisions regarding inventory, marketing strategies, and overall business growth.
+    byteme
+        Interest: Aims to provide users with robust sales reporting tools and functionalities to empower sellers and 
+        businesses to monitor and manage their sales performance effectively, fostering customer satisfaction and platform growth.
+
+Breif Description: This use case describes the process by which a user generates a sales report on the eCommerce platform to gain insights into their 
+                    sales performance, revenue, and other relevant metrics over a specified period.
+Pre-Conditions :
+    User has access to the eCommerce platform and is logged into their seller/business account.
+    The eCommerce platform offers sales reporting features, allowing users to generate comprehensive reports on their sales activities and performance.
+    User has sufficient data available on the platform for the selected reporting period, including sales transactions, revenue, product information, and customer data.
+Triggers :
+    The user decides to analyze their sales performance or gather insights into their business operations
+Basic Flow :
+    User navigates to the sales reporting section or dashboard within their seller/business account on the eCommerce platform.
+    User specifies the parameters for the sales report, including the reporting period (e.g., daily, weekly, monthly), sales channels (e.g., online store, marketplace),
+     and metrics to include (e.g., sales revenue, units sold, top-selling products).
+    User initiates the generation of the sales report by clicking on the "Generate Report" button or similar action.
+    The eCommerce platform processes the selected parameters and retrieves relevant data from its database to compile the sales report.
+    The generated sales report is displayed to the user within the reporting section or dashboard.
+    can be exported using csv and pdf file format
+Extensions : 
+    E1: Predictive Analytics and Forecasting:
+        Condition: User wants to leverage predictive analytics and forecasting models to predict future sales trends and performance.
+        Flow:
+            Platform offers advanced analytics features, including predictive modeling and forecasting algorithms, to analyze historical sales data and predict future trends.
+            User applies predictive analytics and forecasting techniques to anticipate future sales patterns, demand fluctuations,
+             and revenue projections, guiding strategic decision-making and resource allocation.
+
+
+Use Case Name : follow a seller / store          ID : 27           Importance Level : High 
+Primary Actor : Seller        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        Interest: Wants to follow specific sellers on the eCommerce platform to stay updated on their new products, promotions, and activities.
+    Seller
+        Interest: Aims to build a loyal customer base and increase visibility by allowing users to follow their seller profile, 
+        leading to potential sales and brand recognition.
+Breif Description: This use case describes the process by which a user chooses to follow a specific seller on the eCommerce platform,
+                    enabling them to receive updates and notifications about the seller's activities and listings.
+Pre-Conditions
+    User has access to the eCommerce platform and is logged into their account.
+    The eCommerce platform supports the feature for users to follow sellers.
+    User knows the seller's username or store name that they want to follow.
+Triggers : 
+    The user encounters a seller whose products or activities they find interesting and decides to follow them for future updates.
+Basic Flow :
+    User navigates to the search or browse section of the eCommerce platform to find sellers they want to follow.
+Alternatively, user may come across a seller's profile while browsing products or categories.
+User clicks on the seller's username or store name to access their profile page.
+On the seller's profile page, user locates the option to follow the seller.
+User clicks on the "Follow" button or similar action to initiate the follow process.
+The platform displays a confirmation prompt to confirm the user's decision to follow the seller.
+
+
+Use Case Name : get nearby Seller          ID : 28           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User 
+        Interest: Wants to discover sellers located nearby to facilitate local pickup options, reduce shipping costs, or support local businesses.
+    Seller
+        Interest: Aims to attract local customers and increase visibility by being listed as a seller nearby, potentially leading to increased sales and customer engagement.
+    byteme platform
+        Interest: Aims to enhance user experience by providing features for users to find sellers located nearby,
+         promoting local commerce and fostering community connections.
+Breif Description:
+                 This use case describes the process by which a user searches for sellers located nearby on the eCommerce platform to explore 
+                 local purchasing options or support businesses in their vicinity.
+Pre-Conditions :
+    User has access to the eCommerce platform and is logged into their account.
+    The eCommerce platform offers features for users to search for sellers based on location or proximity.
+Triggers :
+    The user wants to explore local purchasing options, support businesses in their area, or find sellers offering local pickup or delivery services.
+Basic Flow :
+    User navigates to the search or browse section of the platform and selects the option to find nearby sellers.
+    User enters their location information, such as city, ZIP code, or current location, to search for sellers located nearby.
+    Alternatively, the platform may use geolocation services to automatically detect the user's location.
+    The platform displays a list of sellers located nearby based on the user's entered location or detected geolocation.
+
+Use Case Name :  Bid for a Product          ID : 29           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        Interest: Wants to participate in auctions or bidding processes to potentially purchase a desired product at a competitive price.
+    Seller
+        Interest: Aims to attract potential buyers and maximize the selling price of their products through bidding processes,
+         leading to increased revenue and customer engagement.
+    byteme platform
+        Interest: Aims to facilitate auction-style sales and bidding processes on the platform to provide users with opportunities 
+        to bid for products, enhancing user engagement and platform activity.
+
+Basic Flow : 
+    User navigates to the product listing page on the eCommerce platform for the item they want to bid on.
+    The product listing indicates that the item is available for bidding through an auction-style sale.
+    User reviews the bidding information provided on the product listing, including the starting bid price, 
+            current highest bid, bidding increments, and remaining time duration for the auction.
+    User decides to place a bid on the product and enters their bid amount into the designated bidding field.
+    The bid amount must meet or exceed the minimum bid increment specified by the platform.
+    User confirms their bid by clicking on the "Place Bid" button or similar action.
+The platform validates the bid amount and updates the current highest bid if the user's bid is successful.
+User monitors the bidding activity on the product listing page to track the progress of the auction and observe competing bids from other users.
+The platform displays real-time updates on the current highest bid and remaining time duration for the auction.
+
+
+Use Case Name :  Register Delivery Person          ID : 30           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        Interest: Wants to register as a delivery person on the  platform to provide delivery services for orders placed by customers.
+    byteme platform     
+        Interest: Aims to manage and oversee the registration process for delivery persons, ensuring compliance with platform policies and standards.
+Breif exlanation:: 
+    Description: This use case describes the process by which a user applies to register as a delivery person on the eCommerce platform, 
+    providing necessary information and undergoing verification procedures to become eligible for delivering orders to customers.
+Basic Flow :
+    User navigates to the delivery person registration page on the eCommerce platform, typically accessible from the platform's settings or account management section.
+    User enters their personal information required for registration
+    User submits the registration application form along with any required documentation through the platform's interface.
+    The platform initiates the verification process to assess the user's eligibility and suitability for becoming a delivery person.
+    Once the verification process is completed, the platform notifies the user of the status of their registration application.
+
+
+Use Case Name :  Give Feedback for Product          ID : 31           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        User navigates to the product page or order history section on the eCommerce platform to access the feedback submission feature for the purchased product.
+    Seller
+        nterest: Aims to receive feedback from customers to assess product performance, gather insights for product improvement, and build trust with potential buyers.
+    Other Users
+        Interest: May rely on feedback provided by others to make informed purchasing decisions and evaluate the quality and reliability of products and sellers.
+Brief Description: 
+    This use case describes the process by which a user submits feedback or a review for a purchased product on the platform,
+     sharing their opinions, ratings, and experiences with the product and selle
+Basic Flow :
+    User navigates to the product page or order history section on the eCommerce platform to access the feedback submission feature for the purchased product.
+    User selects the option to provide feedback or leave a review for the product they purchased
+    User reviews the entered feedback to ensure accuracy and completeness.
+    User submits the feedback by clicking on the "Submit" button or similar action.
+
+Use Case Name : Personalized AI recommendation         ID : 32           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        Interest: Seeks personalized product recommendations tailored to their preferences, browsing history, purchase behavior, 
+        and demographic information to enhance their shopping experience and discover relevant products.
+Breif Descrition :
+    Description: This use case describes the process by which the eCommerce platform employs AI algorithms and 
+    machine learning techniques to generate personalized product recommendations for users based on their individual preferences, behavior, and characteristics.
+Basic Flow : 
+    The platform's AI recommendation system processes and analyzes user data, 
+        applying machine learning algorithms and models to extract patterns, preferences, and correlations from the data.
+    Based on the user's profile and activity, the AI recommendation system generates a list of personalized product recommendations that are most likely to align with the user's preferences and interests.
+
+
+Use Case Name :  predictive analysis          ID : 33           Importance Level : High 
+Primary Actor : User        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    User
+        Interest: Seeks insights and predictions about future trends, customer behavior, 
+            sales performance, and market dynamics to make informed decisions and optimize strategies on the eCommerce platform.
+    byteme software 
+        Interest: Aims to leverage predictive analysis to forecast demand, identify opportunities, 
+        mitigate risks, and optimize business operations on the platform, ultimately driving growth and profitability.
+Breif Description: This use case describes the process by which the eCommerce platform utilizes predictive analytics techniques
+     to analyze historical data, identify patterns, and generate forecasts and insights for various aspects of the business, 
+     such as sales, inventory management, pricing, and customer behavior.
+Pre-Conditions :
+    The eCommerce platform has access to a comprehensive dataset containing historical transactional data, customer interactions, website traffic, product attributes, and other relevant variables.
+    Data is clean, structured, and sufficiently granular for predictive analysis.
+    The platform's predictive analytics infrastructure, including algorithms, models, and tools, is in place and operational.
+Triggers :
+    Periodic or ad-hoc requests from sellers or store owneres for insights, forecasts, or predictions to support decision-making processes
+    and strategic planning on the eCommerce platform.
+Basic Flow :
+    The platform collects and aggregates historical data from various sources, including transaction logs, customer databases and website analytics.
+    Data preprocessing techniques are applied to clean, transform, and organize the data into a suitable format for predictive analysis.
+    Relevant features or variables are selected from the dataset based on their potential impact on the target prediction or forecasting task.
+    Predictive analytics models, such as regression, classification, time series forecasting, or machine learning algorithms, are selected and trained using the prepared dataset.
+    The trained predictive models are evaluated using validation techniques, such as cross-validation, holdout validation, or time-based validation, to assess their performance and generalization capabilities.
+    Model performance metrics, such as accuracy, precision, recall, or RMSE (Root Mean Square Error), are calculated to measure the effectiveness of the predictive models.
+    The validated predictive models are used to generate forecasts, predictions, or insights for specific business metrics or KPIs, such as sales revenue, customer churn rate, demand forecasting, or product recommendations.
+    Predictions may be generated for different time horizons, such as short-term forecasts for inventory planning or long-term trends for strategic decision-making.
+    The generated predictions and insights are visualized and presented to stakeholders through interactive dashboards, reports, charts, or graphs.
+    Stakeholders can explore and interpret the predictive analysis results to gain actionable insights and inform decision-making processes.
+Postconditions :
+    Sellers receive accurate, actionable, and timely predictions and insights generated through predictive analysis, 
+    enabling informed decision-making and strategic planning on the eCommerce platform.
+    The predictive analytics models are continuously monitored, updated, and refined to adapt to changing business conditions and improve predictive accuracy over time.
+
+
+Use Case Name :  Visual Search for product      ID : 34           Importance Level : High 
+Primary Actor : Customer        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Customer
+        Interests: Convenient and accurate product search, time-saving, finding visually similar items
+    Developer
+            Interests: Efficient and bug-free implementation, scalability, and ease of maintenance.
+Breif description :
+    The Visual Search feature allows customers to search for products on the platform by uploading images or taking photos using their device's camera.
+    The system analyzes the image and provides search results based on visually similar products available on the platform.
+Pre-conditions:
+    The customer must be logged into their account.
+    The eCommerce platform must have the Visual Search feature enabled.
+    The customer's device must have access to the camera or a library of images.
+Triggers:
+    The customer selects the Visual Search option from the search bar or product search menu.
+Basic Flow:
+    The customer selects the Visual Search option from the search bar or product search menu.
+    The system prompts the customer to either upload an image or take a photo using their device's camera.
+    The customer uploads/selects an image or takes a photo.
+    The system processes the image and extracts relevant features.
+    The system searches the product database for visually similar items.
+    The system displays the search results to the customer.
+    The customer can view details, add items to the cart, or make a purchase based on the search results.
+
+
+Use Case Name :  Create Restaurant Account         ID : 35           Importance Level : High 
+Primary Actor : Restaurant Owner        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Restaurant Owner/Manager: Interested in creating an account for their restaurant to reach more customers and manage orders efficiently.
+    Administrator: Interested in overseeing the registration process and ensuring the legitimacy of registered restaurants.
+Brief Description:
+    This use case describes the process of a restaurant owner or manager creating an account for their restaurant on the food delivery platform.
+Pre-Conditions:
+    The restaurant must have all necessary legal permits and licenses to operate.
+    The restaurant must have valid contact information and address.
+    The restaurant must agree to the terms and conditions of the food delivery platform.
+Triggers:
+    Restaurant owner/manager decides to register their restaurant on the food delivery platform.
+Basic Flow:
+    Restaurant owner/manager visits the website or opens the app of the food delivery platform.
+    Restaurant owner/manager selects the option to create a new restaurant account.
+    Restaurant owner/manager provides necessary information about the restaurant, such as name, address, contact details, cuisine type, operating hours, etc.
+    Restaurant owner/manager uploads required documents, such as business licenses, permits, menu, and photos.
+    Restaurant owner/manager sets up account preferences, such as delivery radius, minimum order amount, delivery fees, etc.
+    Restaurant owner/manager reviews the information provided and confirms the registration.
+    The system verifies the provided information and documents.
+    Upon successful verification, the restaurant account is created and added to the platform.
+    The system notifies the restaurant owner/manager about the successful registration and provides access to the restaurant management dashboard.
+
+
+Use Case Name :  voice commerce            ID :            Importance Level : High 
+Primary Actor : Customer        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in making purchases conveniently using voice commands.
+    Byteme Platform: Interested in providing a seamless voice commerce experience to customers, increasing sales, and enhancing user satisfaction.
+    Developers/Technicians: Interested in maintaining and improving the voice recognition technology and integration with the platform.
+Brief Description:
+    This use case describes the process of a customer making purchases through voice commands on an e-commerce and delivery platform.
+Pre-Conditions:
+    Customer must have a registered account on the platform.
+    Customer's device must have a microphone and internet connectivity.
+    Voice recognition technology must be enabled and functioning properly.
+Triggers:
+    Customer activates voice commerce feature on the platform.
+    Customer issues a voice command to initiate a purchase.
+Basic Flow:    
+    Customer activates voice commerce feature by saying a wake word or using a specific command (e.g., "Hey Alexa, open Amazon").
+    Platform's voice assistant prompts the customer to state their request.
+    Customer issues a voice command to search for products or place an order (e.g., "Find me a red dress" or "Order a large pepperoni pizza from Domino's").
+    Platform's voice recognition technology processes the command ,converts it to text and  retrieves relevant information from the product database.
+    Platform presents the search results or confirms the order details to the customer.
+    Customer confirms the selection or provides additional instructions using voice commands.
+    Platform processes the order and sends it to the respective seller or restaurant for fulfillment.
+    Seller or restaurant acknowledges the order and begins preparation.
+    Platform provides order confirmation to the customer and estimated delivery time if applicable.
+    Seller or restaurant completes the order and hands it over to the delivery service (if applicable).
+    Delivery service delivers the order to the customer's specified location.
+    Customer receives the order and confirms satisfaction.
+
+Use Case Name :  Manage Menus            ID :   36         Importance Level : High 
+Primary Actor : Customer        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Restaurant Owner/Manager: Interested in maintaining and updating their restaurant's menu to accurately reflect available items and prices.
+    Platform Administrator: Interested in overseeing the management of menus across all restaurants on the platform to ensure consistency and compliance with platform policies.
+    Customers: Interested in accessing up-to-date menus to make informed decisions when placing orders.
+Brief Description:
+    This use case describes the process of a restaurant owner or manager managing their restaurant's menu on the platform.
+Pre-Conditions:
+    Restaurant must have a registered account on the platform.
+    Restaurant must be logged into their account.
+    Platform's menu management tools must be accessible and functional.
+Triggers:
+    Restaurant owner/manager decides to add, update, or remove items from the menu.
+    Platform administrator initiates a menu review process for a specific restaurant.
+Basic Flow:
+    Restaurant owner/manager accesses the menu management section of their account on the platform.
+    Restaurant owner/manager selects the option to add, update, or remove menu items.
+    For adding or updating items:
+        Restaurant owner/manager provides details for each item, including name, description, category, price, and optional attributes (e.g., customization options, dietary information).
+        Restaurant owner/manager uploads images for each item.
+    For removing items:
+        Restaurant owner/manager selects the items to be removed from the menu.
+        Restaurant owner/manager reviews the changes made to the menu.
+        Restaurant owner/manager saves the changes, confirming the update to the menu.
+        Platform updates the restaurant's menu on the platform, reflecting the changes made by the restaurant owner/manager.
+
+Use Case Name :  View Order History            ID :   36         Importance Level : High 
+Primary Actor : Restaurant Owners        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Restaurant Owner/Manager: Interested in accessing past orders to track sales, analyze customer preferences, and monitor order fulfillment.
+    Byteme Platform : Interested in providing restaurant owners with a comprehensive order history feature to enhance their operational efficiency and decision-making.
+    Developers/Technicians: Interested in maintaining and optimizing the order history feature to ensure accuracy, reliability, and performance for restaurant owners.
+Brief Description : This use case describes the process of a restaurant owner or manager accessing and viewing the order history of their restaurant on the food delivery platform.
+Pre-Conditions : 
+    Restaurant must have a registered account on the platform.
+    Restaurant owner/manager must be logged into their account.
+    Restaurant must have received and fulfilled orders previously.
+Triggers:
+    Restaurant owner/manager selects the option to view order history within their account dashboard.
+    Restaurant owner/manager logs into their account and navigates to the order history section.
+Basic Flow:
+    Restaurant owner/manager logs into their account on the platform.
+    Restaurant owner/manager navigates to the order history section within their account dashboard.
+    Platform retrieves and displays a list of past orders received by the restaurant, organized by order number, date, and status.
+    Restaurant owner/manager reviews the list of past orders, including details such as order items, customer information, order date, total amount, and order status.
+    Restaurant owner/manager may filter or search for specific orders based on criteria such as date range, order status, or customer name.
+    Restaurant owner/manager selects a specific order to view more detailed information, such as order items, delivery address, delivery instructions, and payment details.
+    Restaurant owner/manager may choose to export or download the order history for further analysis or record-keeping purposes.
+    Restaurant owner/manager exits the order history section when done.
+
+
+Use Case Name :  Manage promotions            ID :   37         Importance Level : High 
+Primary Actor : Sellers/Restaurant Owners/Store Owners        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Sellers/Restaurant Owners/Store Owners /Manager: Interested in creating, updating, and managing promotional offers to attract customers, increase sales, and enhance brand visibility.
+    Byteme Platform: Interested in providing restaurant owners with tools and features to create and manage promotions effectively, fostering a competitive marketplace and driving customer engagement.
+    Customers: Interested in discovering and taking advantage of promotional offers to save money and enjoy discounts on food orders.
+Brief Description:
+    This use case describes the process of a restaurant owner or manager managing promotional offers for their restaurant on the food delivery platform.
+Pre-Conditions:
+   Sellers/Restaurant Owners/Store Owners /Manager must have a registered account on the platform.
+    Sellers/Restaurant Owners/Store Owners /Manager must be logged into their account.
+    Platform's promotion management tools must be accessible and functional.
+Triggers:
+    Sellers/Restaurant Owners/Store Owners /Manager decides to create a new promotion.
+    Sellers/Restaurant Owners/Store Owners /Manager wishes to update or delete existing promotions.
+Basic Flow:
+    Sellers/Restaurant Owners/Store Owners /Manager logs into their account on the platform.
+    Sellers/Restaurant Owners/Store Owners /Manager navigates to the promotion management section within their account dashboard.
+    Sellers/Restaurant Owners/Store Owners /Manager selects the option to create a new promotion or manage existing promotions.
+    For creating a new promotion:
+   Sellers/Restaurant Owners/Store Owners /Manager specifies the details of the promotion, including promotion type (e.g., discount, free item), promotion duration, eligible menu items, minimum order amount (if applicable), and any other relevant conditions.
+    Sellers/Restaurant Owners/Store Owners /Manager sets the discount amount or defines the terms of the promotion.
+    For updating or deleting existing promotions:
+    Sellers/Restaurant Owners/Store Owners /Manager selects the promotion to be updated or deleted from the list of existing promotions.
+    Sellers/Restaurant Owners/Store Owners /Manager makes changes to the promotion details or confirms deletion of the promotion.
+    Sellers/Restaurant Owners/Store Owners /Manager reviews the changes made to promotions and confirms the updates.
+    Platform updates the Sellers/Restaurant Owners/Store Owners /Manager promotions on the platform, reflecting any additions, updates, or removals made by the restaurant owner/manager.
+
+Use Case Name :  Place Order            ID :   38         Importance Level : High 
+Primary Actor : Customer        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in placing an order for  product/food/groceries quickly and easily.
+    Sellers/Restaurant Owners/Store Owners : Interested in receiving and fulfilling orders promptly.
+    Delivery Driver: Interested in receiving delivery requests efficiently.
+    Administrator: Interested in maintaining the smooth operation of the system and resolving any issues that arise.
+Brief Description:
+    This use case describes the process of a customer placing an order for product/food/groceries through the system.
+Pre-Conditions:
+    Customer must have a registered account with the platform.
+    Customer must be logged into their account.
+    Sellers/Restaurant Owners/Store Owners  must be listed and available for ordering.
+    The delivery service must be operational.
+Triggers:
+    Customer selects a Sellers/Restaurant Owners/Store Owners  and chooses items to order.
+    Customer proceeds to checkout to place the order.
+Basic Flow:
+    Customer logs into their account.
+    Customer browses through available Sellers/Restaurant Owners/Store Owners  and selects one.
+    Customer adds desired items to the shopping cart.
+    Customer reviews the order in the shopping cart.
+    Customer proceeds to checkout.
+    Customer selects a payment method and provides necessary information.
+    Customer confirms the order.
+    The system sends the order to the selected Sellers/Restaurant Owners/Store Owners .
+    The Sellers/Restaurant Owners/Store Owners  confirms the order and begins preparing the food.
+    The system assigns a delivery driver to pick up the order.
+    The delivery driver picks up the order from the Sellers/Restaurant Owners/Store Owners .
+    The delivery driver delivers the order to the customer's specified location.
+
+Use Case Name :  Track Order status            ID :   39         Importance Level : High 
+Primary Actor : Customer        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in tracking the status of their food order to know when it will be delivered.
+    Restaurant: Interested in providing accurate and timely updates on the preparation and delivery status of orders.
+    Delivery Driver: Interested in receiving order details and tracking updates to efficiently complete deliveries.
+    Byteme Platform : Interested in providing a seamless tracking experience to customers, ensuring transparency and customer satisfaction.
+Brief Description:
+    This use case describes the process of a customer tracking the status of their food order from the time it is placed until it is delivered.
+Pre-Conditions :
+    Customer must have a registered account with the food delivery platform.
+    Customer must be logged into their account.
+    Order must be placed and confirmed by the restaurant.
+Triggers :
+    Customer selects the option to track their order status within the app or website.
+    Customer receives a notification indicating an update on their order status.
+Basic Flow :
+    Customer opens the food delivery app or website.
+    Customer logs into their account.
+    Customer navigates to the order history or tracking section.
+    Customer selects the specific order they want to track.
+    Platform retrieves and displays the current status of the order, which may include:
+        Order confirmed: Restaurant has received the order and started preparing it.
+        Order picked up: Delivery driver has picked up the order from the restaurant.
+        Order on the way: Delivery driver is en route to the customer's location.
+        Order delivered: Order has been successfully delivered to the customer.
+    Platform continuously updates the order status in real-time based on information provided by the restaurant and delivery driver.
+    Customer can view additional details such as estimated delivery time, delivery driver's name, and contact information.
+    Customer may receive push notifications or updates via email or SMS when there are changes to the order status.
+    Customer tracks the order status until it is delivered.
+    Once the order is delivered, the platform updates the status to "delivered" in the order history.
+
+
+Use Case Name :  place Group order            ID :   40         Importance Level : High 
+Primary Actor : Customers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in coordinating a group order with friends or colleagues for convenience and shared enjoyment.
+    Restaurant: Interested in receiving and fulfilling group orders efficiently to maximize sales and customer satisfaction.
+    Byteme Platform: Interested in providing a seamless group ordering experience to customers, fostering social interaction and increasing order volume.
+Brief Description:
+    This use case describes the process of a customer initiating and coordinating a group order with multiple participants through the food delivery platform.
+Pre-Conditions:
+    Customer must have a registered account with the food delivery platform.
+    Customer must be logged into their account.
+    Restaurants must be listed and available for ordering.
+    Group order feature must be enabled and accessible on the platform.
+Triggers:
+    Customer selects the option to start a group order within the app or website.
+    Customer invites friends or colleagues to participate in the group order.
+Basic Flow:
+    Customer opens the food delivery app or website.
+    Customer logs into their account.
+    Customer selects the option to start a group order.
+    Customer browses through available restaurants and selects items to add to the group order.
+    Customer invites friends or colleagues to join the group order by sending them an invitation link or code through the platform.
+    Invited participants receive the invitation and join the group order by clicking on the link or entering the code provided.
+    Each participant selects items to add to the group order from the available menu.
+    Platform aggregates the selected items from all participants into a single order basket.
+    Customer or designated organizer reviews the group order, makes any necessary adjustments, and confirms the order.
+    Platform sends the consolidated order to the selected restaurant for preparation.
+    Restaurant receives and processes the group order, ensuring all items are prepared and packaged accordingly.
+    Delivery driver assigned by the platform picks up the group order from the restaurant.
+    Delivery driver delivers the group order to the customer's specified location or designated meeting point.
+    Participants receive their respective portions of the group order and enjoy the meal together.
+
+
+Use Case Name :  Search for menus            ID :   41         Importance Level : High 
+Primary Actor : Customers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in finding restaurants and browsing menus to select items for ordering.
+    Restaurant: Interested in having their menu items easily discoverable by customers to increase orders and revenue.
+    Byteme Platform: Interested in providing efficient search functionality to enhance user experience and facilitate food discovery.
+Brief Description :
+    This use case describes the process of a customer searching for menus of restaurants available on the food delivery platform.
+Pre-Conditions:
+    Customer must have a registered account with the food delivery platform.
+    Customer must be logged into their account.
+    Restaurants must be listed and available for ordering.
+Triggers:
+    Customer opens the food delivery app or website.
+    Customer selects the option to search for restaurants or menus.
+Basic Flow:
+    Customer opens the food delivery app or website.
+    Customer logs into their account.
+    Customer navigates to the search section or enters keywords in the search bar.
+    Customer enters search criteria such as cuisine type, restaurant name, dish name, or specific attributes (e.g., vegetarian, gluten-free).
+    Platform retrieves and displays search results based on the entered criteria, including a list of restaurants and menu items that match the search query.
+    Customer browses through the search results, viewing restaurant profiles, menu items, prices, ratings, and other relevant information.
+    Customer selects a restaurant or menu item from the search results to view more details.
+    Platform displays additional information about the selected restaurant or menu item, such as description, ingredients, reviews, and photos.
+    Customer may filter or sort the search results based on various criteria (e.g., price, distance, popularity) to narrow down their choices.
+    Customer selects a restaurant and proceeds to view the full menu to choose items for ordering.
+
+Use Case Name :  Rate or Review Restaurants            ID :   41         Importance Level : High 
+Primary Actor : Customers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in providing feedback on their dining experience to inform other potential customers and influence restaurant ratings.
+    Restaurant Owner/Manager: Interested in receiving feedback from customers to improve service quality and address any issues.
+    Byteme Platform: Interested in facilitating the rating and review process to maintain transparency and trust among customers and restaurants.
+Brief Description:
+    This use case describes the process of a customer rating or reviewing a restaurant based on their dining experience through the food delivery platform.
+Basic Flow : 
+    Customer navigates to the order history or profile section to find the relevant order.
+    Customer selects the option to rate or review the restaurant associated with the order.
+    Platform displays a rating scale or prompts the customer to provide a star rating (e.g., 1 to 5 stars).
+    Customer selects the appropriate star rating based on their overall satisfaction with the restaurant.
+    Platform provides optional fields for the customer to leave written feedback or comments about their experience.
+    Customer provides additional comments or feedback if desired.
+    Customer submits the rating and review.
+    Platform records the rating and review associated with the restaurant and order.
+    Restaurant owner/manager receives notification of the new rating and review.
+    Restaurant owner/manager may respond to the review publicly or privately to address any concerns or express gratitude.
+
+Use Case Name :  Create Subscription service program           ID :   42         Importance Level : High 
+Primary Actor : seller/store owners/restaurants/book stores/event organizers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer: Interested in accessing exclusive benefits, discounts, or perks through a subscription service to save money and enhance their food delivery experience.
+    Byteme Platform: Interested in offering subscription services to customers as a value-added feature to increase customer loyalty and recurring revenue.
+    store owners/sellers/Restaurant Partners: Interested in increased order volume and exposure to subscribers through the platform's subscription service.
+Brief Description:
+    This use case describes the process of a customer subscribing to a premium or loyalty program offered by the food delivery platform.
+Pre-Conditions:
+    Customer must have a registered account with the food delivery platform.
+    Subscription service feature must be available and accessible on the platform.
+    Customer must have a valid payment method linked to their account.
+Triggers :
+    Customer selects the option to explore subscription services within the app or website.
+    Customer receives targeted promotions or notifications about subscription offerings.
+Basic Flow :
+    Customer navigates to the subscription services section or promotion.
+    Customer views available subscription options, benefits, and pricing plans.
+    Customer selects the desired subscription tier or plan based on their preferences and budget.
+    Customer reviews the subscription terms and conditions, including payment frequency, renewal policies, and cancellation terms.
+    Customer confirms the subscription and provides payment details if necessary.
+    Platform processes the subscription payment and activates the customer's subscription benefits.
+    Customer receives confirmation of their subscription activation.
+    Customer begins enjoying the benefits of their subscription, which may include:
+    Discounts or free delivery on orders
+    Exclusive access to special promotions or deals
+    Priority customer support
+    Access to premium features or content
+    Customer may manage their subscription settings, such as updating payment information or modifying subscription preferences, through their account dashboard.
+
+
+Use Case Name :  Accept or decline Order            ID :   43         Importance Level : High 
+Primary Actor : Customers        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Delivery Driver: Interested in efficiently managing their workload and maximizing earnings by accepting suitable orders and declining unsuitable ones.
+    Byteme Platform: Interested in ensuring timely order fulfillment and maintaining a positive customer experience by matching orders with available delivery drivers effectively.
+    Customers: Interested in timely delivery of their orders and may be affected by delays or rejections by delivery drivers.
+Brief Description:
+    This use case describes the process of a delivery driver accepting or declining incoming delivery orders through the food delivery platform.
+Pre-Condition:
+    Delivery driver's location must be within the service area designated by the platform.
+Basic Flow:
+    Delivery driver receives a notification or alert on their device indicating a new delivery order.
+    Delivery driver opens the delivery driver app or navigates to the available orders section.
+    Delivery driver views details of the incoming order, including pick-up location, drop-off location, order value, and estimated delivery distance and time.
+    Delivery driver evaluates the order details and determines whether to accept or decline the order based on various factors such as distance, traffic conditions, order value, and availability.
+    If the delivery driver decides to accept the order:
+    Delivery driver selects the option to accept the order within the app.
+    Platform confirms the acceptance of the order and assigns it to the delivery driver.
+    Delivery driver proceeds to the pick-up location to collect the order.
+    If the delivery driver decides to decline the order:
+    Delivery driver selects the option to decline the order within the app.
+    Platform removes the order from the delivery driver's queue and makes it available for other drivers.
+    Platform may ask the delivery driver to provide a reason for declining the order (optional).
+    Delivery driver repeats the process of evaluating and accepting or declining incoming orders as they become available
+
+Use Case Name :  Update Order Status            ID :   44         Importance Level : High 
+Primary Actor : Customers        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Delivery Driver: Interested in efficiently updating the status of delivery orders to provide accurate information to customers and the platform.
+    Byteme Platform: Interested in maintaining transparency and ensuring customers receive real-time updates on their orders for a positive delivery experience.
+    Customers: Interested in tracking the status of their orders to know when to expect delivery and stay informed about any delays or issues.
+Brief Description:
+    This use case describes the process of a delivery driver updating the status of delivery orders they are assigned to through the  platform.
+Pre-Conditions :
+    Delivery driver must have accepted a delivery order and be currently assigned to it.
+Triggers:
+    Delivery driver arrives at the pick-up location.
+    Delivery driver picks up the order from the store/restaurant/warehouse.
+    Delivery driver is en route to the delivery location.
+    Delivery driver encounters delays or issues during delivery.
+Basic Flow :
+    Delivery driver receives an order assignment and navigates to the pick-up location.
+    Delivery driver arrives at the pick-up location and confirms their arrival within the app.
+    Platform updates the order status to "Driver arrived at pick-up location" and notifies the customer.
+    Delivery driver picks up the order from the restaurant and confirms the pick-up within the app.
+    Platform updates the order status to "Order picked up" and notifies the customer.
+    Delivery driver begins the delivery journey to the customer's location.
+    Delivery driver encounters traffic or other delays during the delivery journey.
+    Delivery driver updates the order status within the app to inform the platform and customer about the delay.
+    Platform updates the order status to reflect the delay and notifies the customer accordingly.
+    Delivery driver arrives at the delivery location and confirms their arrival within the app.
+    Platform updates the order status to "Driver arrived at delivery location" and notifies the customer.
+    Delivery driver completes the delivery by handing over the order to the customer or leaving it at the designated location.
+    Delivery driver updates the order status within the app to indicate successful delivery.
+    Platform updates the order status to "Order delivered" and notifies the customer.
+
+
+Use Case Name :  Approve Ticket Refund             ID :   45         Importance Level : High 
+Primary Actor : Event Organizer        Use Case Type : Primary Use Case
+Stakeholders and Interests : 
+    Event Organizer: Interested in efficiently managing ticket refunds to maintain customer satisfaction and manage event finances.
+    Customer (Ticket Holder): Interested in receiving timely refunds for canceled or refunded event tickets.
+Brief Description:
+    This use case describes the process of an event organizer approving a ticket refund request from a customer.
+Pre-Conditions :
+    Event organizer must have access to the system.
+    A ticket refund request must have been submitted by a customer.
+    The event must be eligible for refunds based on the event organizer's refund policy.
+Triggers :
+    Event organizer receives a notification or alert indicating a new ticket refund request.
+    Event organizer manually checks the event management system for pending refund requests.
+Basic Flow :
+    Event organizer navigates to the refund management section or views the list of pending refund requests.
+    Event organizer selects the ticket refund request they wish to review and approve.
+    Event organizer reviews the details of the ticket refund request, including:
+    Ticket holder's information
+    Ticket details (e.g., ticket type, quantity)
+    Reason for the refund request
+    Refund amount
+    Refund policy and eligibility
+    Event organizer approves the ticket refund request.
+    Platform processes the refund transaction and updates the ticket holder's account.
+    Platform sends a notification or confirmation email to the ticket holder informing them of the approved refund.
+Postconditions:
+    Ticket refund request is approved and processed successfully.
+    Ticket holder receives the refund amount according to the event organizer's refund policy.
+
+Use Case Name : Register for Subscription Program           ID :   46         Importance Level : High 
+Primary Actor : User (Customer)        Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    User (Customer): Interested in accessing exclusive benefits, discounts, or services offered by the subscription program.
+    Byte me Platform: Interested in increasing customer loyalty, recurring revenue, and providing additional value-added services to users.
+Brief Description:
+    This use case describes the process of a user registering for a subscription program offered on the byteme platform to access exclusive benefits and services.
+Pre-Conditions:
+    User must have a registered account with the byteme platform.
+    Subscription program feature must be available and accessible on the platform.
+Triggers:
+    User navigates to the subscription program section on the platform.
+    User receives targeted promotions or notifications about the subscription program.
+Basic Flow:
+    User navigates to the subscription program section or promotional page.
+    User views information about the subscription program, including benefits, pricing, and terms.
+    User selects the desired subscription plan (if multiple plans are available).
+    User reviews the subscription details and confirms their decision to subscribe.
+    User provides payment information and completes the subscription purchase.
+    Platform processes the subscription payment and activates the user's subscription benefits.
+    User receives confirmation of their subscription activation.
+
+Use Case Name : Send/Receive Message         ID :   47         Importance Level : High 
+Primary Actor : User (Customer),Store Owners, Restaurants owners,Books Stores /delivery person   Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Users: Interested in sending and receiving messages to/from other users.
+    System Administrators: Interested in maintaining system functionality and security.
+    Developers: Interested in implementing and maintaining the messaging feature efficiently.
+    Business Owners: Interested in user engagement and satisfaction to drive platform usage.
+Brief Description:
+    This use case involves users sending and receiving messages within the chat system.
+Triggers:
+    User selects a contact to send a message to.
+    User receives a message notification.
+Basic Flow :
+    User (Customer),Store Owners, Restaurants owners,Books Stores /delivery person send a message
+        User selects a contact.
+        User types a message.
+        User clicks on the send button.
+        System validates the message.
+        System sends the message to the recipient.
+        System updates the chat interface with the sent message.
+    User (Customer),Store Owners, Restaurants owners,Books Stores /delivery person receives a message
+        System receives a message from another user.
+        System validates the message.
+        System updates the chat interface with the received message.
+        System notifies the recipient user of the new message.
+
+Use Case Name : Send Chat Room Invitation Link         ID :   48         Importance Level : High 
+Primary Actor : User (Customer),Store Owners, Restaurants owners,Books Stores /delivery person   Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Users: Interested in inviting others to join chat rooms.
+    System Administrators: Interested in maintaining system functionality and security.
+    Developers: Interested in implementing and maintaining the invitation feature efficiently.
+    Business Owners: Interested in user engagement and satisfaction to drive platform usage.
+Brief Description:
+    This use case involves users sending invitation links to others, inviting them to join specific chat rooms within the chat system.
+Pre-Conditions:
+    User must be registered and logged into the chat system.
+    User must have permissions to create and invite others to chat rooms.
+    The chat room must already exist.
+Basic Flow:
+    User Generates Invitation Link:
+        User navigates to the chat room they want to invite others to.
+        User selects the option to invite others.
+        System generates a unique invitation link for the chat room.
+        System displays the invitation link to the user.
+        User Shares Invitation Link:
+    User copies the invitation link.
+        User can share the link through various communication channels (e.g., email, messaging apps).
+        User sends the invitation link to the desired recipients.
+        Recipient Joins Chat Room:
+    Recipient receives the invitation link.
+        Recipient clicks on the invitation link.
+        System verifies the validity of the link.
+        System redirects the recipient to the chat room.
+        Recipient joins the chat room and becomes an active member.
+
+Use Case Name : Group Order      ID :   49         Importance Level : High 
+Primary Actor : User (Customer)  Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer
+        Interest: Convenience in ordering products/foods and groceries , timely delivery, diverse product/food  options, accurate order fulfillment, and easy payment methods.
+    Stores/Restaurant
+        Interest: Receiving and fulfilling orders efficiently, accurate order details, timely pickup by delivery personnel, and smooth payment processing.
+    Delivery Personnel
+        Interest: Clear order details, optimal routing for pickups and deliveries, timely payment for deliveries, and safety features.
+Brief Description
+    A group of customers collaboratively places an order from multiple devices,
+    but the order is consolidated and treated as a single order for the restaurant and delivery personnel.      
+    Each participant in the group order can select their own items, and the system combines these selections into a single order for processing and delivery.
+Pre-Conditions : 
+    All participants must be within the same delivery zone.
+Basic Flow : 
+        Initiate Group Order
+            The initiating customer selects the option to start a group order from the app or website.
+            The system generates a unique link or code for the group order.
+        Invite Participants
+            The initiating customer shares the link or code with other participants.
+            Participants click the link or enter the code to join the group order.
+        Add Items to Cart
+            Each participant browses the restaurant's menu and selects their desired items.
+            Participants add items to their individual cart within the group order.
+        Finalize Group Order
+            The initiating customer reviews all items added by the participants.
+            The system combines all items into a single order.
+            The initiating customer selects delivery options and finalizes the order.
+        Payment
+            The initiating customer (or each participant, if split payment is enabled) completes the payment process.
+            The system processes the payment(s) and confirms the order with the restaurant.
+        Order Processing
+            The restaurant receives and prepares the order.
+            Delivery personnel is assigned and picks up the order.
+        Delivery
+            Delivery personnel delivers the order to the initiating customer's specified location.
+            All participants receive notifications about the order status and delivery.
+Postconditions
+    The group order is delivered to the specified location.
+    Participants receive confirmation and receipt of their items.
+    The restaurant and delivery personnel receive their payments.
+    The system updates order history for all involved parties.
+
+Use Case Name : Create a Wishlist      ID :  50         Importance Level : High 
+Primary Actor : User (Customer)  Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer    
+        Interest: Easily saving and organizing products they are interested in for future purchase,
+         sharing wishlists with friends and family, and receiving notifications for price drops or availability of items on the wishlist.
+    byteme Platform
+        Interest: Increasing user engagement, encouraging return visits, boosting sales through
+        reminders and notifications, and gathering data on customer preferences.
+    Sellers/store owners
+        Interest: Visibility of products on customer wishlists, understanding customer interests,
+        and potential for increased sales through targeted promotions.
+Brief Description
+    A customer can create a wishlist to save items they are interested in.
+    This wishlist can be accessed, modified, and shared with others. Customers can add or remove items,
+    and receive notifications about price changes or availability.
+Basic Flow:
+    Navigate to Wishlist Feature
+        The customer logs into their account and navigates to the product page of an item they are interested in.
+        The customer clicks on the "Add to Wishlist" button.
+    Create New Wishlist or Select Existing Wishlist
+        The system prompts the customer to either create a new wishlist or add the item to an existing wishlist.
+        If creating a new wishlist, the customer provides a name and description for the wishlist.
+    Add Item to Wishlist
+        The customer selects the desired wishlist and confirms the addition of the item.
+        The system adds the item to the selected wishlist and displays a confirmation message.
+    View and Manage Wishlist
+        The customer can navigate to their account and view all their wishlists.
+        The customer can add more items, remove items, rename the wishlist, or delete the wishlist.
+    Share Wishlist (Optional)
+        The customer selects the option to share the wishlist.
+        The system provides sharing options (e.g., email, social media, direct link).
+    Receive Notifications (Optional)
+        The customer opts in to receive notifications for items in their wishlist.
+        The system sends notifications about price drops, restocks, or other relevant updates.
+
+Use Case Name : Add Item to a Wishlist      ID :  51         Importance Level : High 
+Primary Actor : User (Customer)  Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Customer
+        Interest: Easily saving items of interest for future consideration, organizing saved items into different wishlists,
+        receiving notifications about changes (like price drops or availability) of wishlist items.
+    Byteme Platform
+        Interest: Increasing customer engagement, encouraging repeat visits,
+         boosting sales through wishlist reminders and notifications, 
+         and gathering data on customer preferences to enhance marketing strategies.
+Brief Description :
+    This use case describes how a customer can add items to a wishlist.
+    The customer can choose to add items to an existing wishlist or create a new wishlist if needed.
+Basic Flow :
+    Initiate Add to Wishlist
+        The customer clicks on the "Add to Wishlist" button on the product page.
+    Choose Wishlist
+        The system prompts the customer to select an existing wishlist or create a new wishlist.
+        If creating a new wishlist, the customer enters a name and optional description for the new wishlist.
+    Confirm Addition
+        The customer confirms their selection.
+        The system adds the item to the chosen wishlist and displays a confirmation message.
+    View Wishlist (Optional)
+        The customer can navigate to their account to view and manage their wishlists.
+
+Use Case Name : Create a Bundle Deal      ID :  52         Importance Level : High 
+Primary Actor : Seller  Use Case Type : Primary Use Case
+Stakeholders and Interests :
+    Sellers
+        Interest: Create attractive bundle deals to increase sales and average order value.
+    Buyers
+        Interest: Access better deals and discounts by purchasing bundled products.
+Brief Description
+    This use case describes how a seller creates a bundle deal on an e-commerce platform.
+     A bundle deal is a promotional offer where multiple products are grouped and sold together at a discounted price.
+Pre-Conditions
+    The seller must have an active seller account with at least two products listed.
+Basic Flow :
+    Initiate Bundle Creation
+        The seller navigates to the seller dashboard and selects the option to create a new bundle deal.
+    Select Products for the Bundle
+        The seller browses their inventory and selects the products they want to include in the bundle.
+    Set Bundle Details
+        The seller enters details for the bundle, including the bundle name, description, and discounted price.
+    Configure Bundle Terms
+        The seller sets the terms of the bundle deal, such as start and end dates, quantity limits, and any additional conditions.
+    Preview Bundle
+        The seller reviews a preview of the bundle to ensure all details are correct.
+    Publish Bundle
+        The seller publishes the bundle, making it available to buyers on the e-commerce platform.
+    Confirm Bundle Creation
+        The system confirms the bundle has been successfully created and notifies the seller.
+
+Use Case Name : Assign Role for a User      ID :  53         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Administrator
+        Interest: Ensure that users have appropriate roles and permissions to maintain system security and functionality.
+    User
+        Interest: Obtain the necessary permissions to perform tasks related to their role (e.g., seller, buyer, support staff).
+Breif Description: This use case describes the process by which an administrator assigns a specific role to a user in the e-commerce system, 
+    thereby granting them the appropriate permissions.
+Basic Flow : 
+    Initiate Role Assignment:
+    The administrator navigates to the user management section of the system.
+    Search for User:
+    The administrator searches for the user by username, email, or user ID.
+    Select User:
+    The system displays the search results, and the administrator selects the relevant user.
+    Choose Role:
+    The administrator selects the desired role from a dropdown menu of predefined roles.
+    Confirm Assignment:
+    The administrator reviews the selected role and permissions and clicks the "Assign Role" button.
+    System Updates Role:
+    The system updates the user's profile with the new role and associated permissions.
+    Notification:
+    The system sends a notification to the user informing them of their new role.
+
+Use Case Name : Assign permission for a role      ID :  54         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Administrator
+        Interest: Ensure that roles have appropriate permissions to maintain system security and functionality.
+    User
+        Interest: Obtain the necessary permissions to perform tasks related to their assigned role (e.g., seller, buyer, support staff).
+Brief Description : 
+    This use case describes the process by which an administrator assigns specific permissions to a role in 
+    the e-commerce system, thereby defining what actions users with that role can perform.
+Preconditions
+    The administrator must be logged into the system with sufficient permissions to modify role permissions.
+    The list of roles must be predefined in the system.
+    The list of permissions must be predefined in the system.
+Triggers
+    A new role is created and needs permissions assigned.
+    Changes in system requirements necessitate updates to role permissions.
+    A compliance audit requires adjustment of role permissions.
+Basic Flow
+    Initiate Permission Assignment:
+        The administrator navigates to the role management section of the system.
+    Select Role:
+        The administrator selects the role to which permissions will be assigned.
+    View Current Permissions:
+        The system displays the current permissions associated with the selected role.
+    Modify Permissions:
+        The administrator adds or removes permissions as necessary by selecting them from a list of predefined permissions.
+    Review Changes:
+        The administrator reviews the changes to ensure they align with system requirements and compliance standards.
+    Confirm Permission Assignment:
+        The administrator confirms the permission changes.
+    System Updates Permissions:
+        The system updates the permissions associated with the selected role.
+    
+
+Use Case Name : Suspend Account      ID :  55         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Administrator
+    Interest: Ensure that user accounts are suspended when necessary to maintain system security and integrity.
+    User
+    Interest: Understand the conditions under which their account may be suspended and seek resolution if unjustified.
+Description: This use case describes the process by which an administrator suspends a user's account in the e-commerce system, restricting their access to the platform.
+Triggers
+Violation of platform policies or terms of service by the user.
+Suspicious activity detected on the user account.
+User-reported issues requiring account suspension.
+Basic Flow
+Identify User Account:
+The administrator navigates to the user management section of the system.
+Search for User:
+The administrator searches for the user's account by username, email, or user ID.
+Select User Account:
+The system displays the search results, and the administrator selects the relevant user account.
+Initiate Suspension:
+The administrator selects the option to suspend the user account.
+Provide Reason:
+The administrator enters a brief explanation or selects a predefined reason for suspending the account (e.g., policy violation, suspicious activity).
+Confirm Suspension:
+The administrator confirms the suspension action.
+System Suspends Account:
+The system suspends the user account, restricting access to the platform.
+Notification:
+The system sends a notification to the user informing them of the account suspension and providing any relevant instructions or next steps.
+
+Use Case Name : Product Sanction      ID :  56         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Administrator: Manages the overall functioning of the ecommerce system and is responsible for enforcing product sanctions.
+        Interests: Ensuring compliance with legal regulations, maintaining a safe shopping environment, protecting the reputation of the platform.
+    Seller: Provides products for sale on the ecommerce platform.
+        Interests: Avoiding sanctions on their products, maintaining a good standing on the platform.
+    Buyer: Shops for products on the ecommerce platform.
+        Interests: Ensuring the products they purchase are safe and legal, having a seamless shopping experience.
+Brief Description:
+    The Product Sanction feature allows administrators to enforce sanctions on products listed 
+    on the ecommerce platform that violate policies, laws, or standards.
+Preconditions:
+    Sanction policies and regulations are defined.
+Basic Flow:
+    Administrator identifies violation: The administrator identifies a product that violates platform policies or legal regulations.
+    Initiate sanction process: The administrator initiates the sanction process for the identified product.
+    Review product details: The administrator reviews the details of the product, including the violation and evidence.
+    Select sanction type: The administrator selects the appropriate sanction type based on the severity of the violation (e.g., warning, temporary delisting, permanent delisting).
+    Apply sanction: The administrator applies the selected sanction to the product.
+    Notify seller: The system notifies the seller about the sanction applied to their product, providing reasons and next steps.
+    Update product status: The product's status is updated on the platform, reflecting the applied sanction.
+
+Use Case Name : Report Store      ID :  57         Importance Level : High 
+Primary Actor : Customer  Type : Primary Use Case
+Stakeholders and Interests :
+    Buyer: Users who shop for products on the ecommerce platform.
+        Interests: Ensuring the products they purchase meet their expectations in terms of quality, authenticity, and safety.
+    Seller: Individuals or businesses who list products for sale on the ecommerce platform.
+        Interests: Maintaining a good reputation, addressing any issues reported by buyers promptly.
+    Administrator: Manages the overall functioning of the ecommerce system and oversees the resolution of reported issues.
+        Interests: Maintaining the integrity of the platform, ensuring buyer satisfaction, and enforcing policies.
+Brief Description:
+    The Report Store feature allows buyers to report issues with products purchased from sellers on 
+    the ecommerce platform, initiating a resolution process facilitated by administrators.
+Preconditions:
+    The buyer has purchased a product from the platform.
+    The buyer has identified an issue with the purchased product.
+    The seller is listed on the platform and actively selling products.
+    The administrator is logged into the system.
+Triggers:
+    Buyer identifies a problem with a purchased product.
+    Buyer initiates a report through the platform.
+    Administrator reviews reported issues.
+Basic Flow :
+Basic Flow:
+    Buyer identifies issue: The buyer identifies a problem with a product they have purchased from the platform.
+    Initiate report: The buyer initiates a report through the platform, specifying details of the issue encountered.
+    Review report: The administrator reviews the reported issue, including the nature of the problem and any evidence provided by the buyer.
+    Notify seller: If necessary, the administrator notifies the seller about the reported issue, providing details and requesting a response or resolution.
+    Seller responds: The seller responds to the reported issue, providing clarification, offering a solution, or disputing the claim.
+    Mediation: If required, the administrator mediates the communication between the buyer and the seller to facilitate a resolution.
+    Resolution: A resolution is reached based on the outcome of the communication between the buyer and the seller, which may include refunds, replacements, or other agreed-upon actions.
+    Notify buyer: The buyer is notified about the resolution of the reported issue, including any actions taken.
+
+Use Case Name : Register Delivery Vehicle      ID :  58         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Administrator: Oversees the management of delivery operations and the registration process for delivery vehicles.
+        Interests: Ensuring compliance with platform policies, verifying the legitimacy of registered vehicles, and facilitating smooth delivery services.
+    Seller: Lists products for sale on the ecommerce platform and relies on delivery services to fulfill orders.
+        Interests: Ensuring timely and reliable delivery of their products to customers.
+Brief Description:
+    The Register Delivery Vehicle feature allows delivery persons to register their vehicles with
+     the ecommerce platform, enabling them to use these vehicles for shipping products to customers.
+Triggers:
+    The delivery person wishes to add a new vehicle to their fleet for delivery operations.
+    The administrator initiates the registration process for delivery vehicles.
+Basic Flow:
+    Delivery person initiates registration: The delivery person submits a request to register a new vehicle for delivery operations through the platform.
+    Administrator reviews request: The administrator reviews the request for vehicle registration, ensuring it meets platform requirements and regulations.
+    Verify vehicle details: The administrator verifies the details of the vehicle provided by the delivery person, including registration information, insurance, and vehicle specifications.
+    Approve registration: If the vehicle meets all requirements, the administrator approves the registration of the vehicle for delivery operations.
+    Update vehicle status: The vehicle's registration status is updated in the platform's database, indicating that it is approved for use in delivery operations.
+    Notify delivery company: The delivery company is notified about the successful registration of their vehicle, along with any additional instructions or requirements.
+
+Use Case Name : Report product      ID :  59        Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Buyer: Users who shop for products on the ecommerce platform.
+    Interests: Ensuring the products they purchase meet their expectations in terms of quality, authenticity, and safety.
+    Seller: Individuals or businesses who list products for sale on the ecommerce platform.
+    Interests: Maintaining a good reputation, addressing any issues reported by buyers promptly.
+    Administrator: Manages the overall functioning of the ecommerce system and oversees the resolution of reported issues.
+    Interests: Maintaining the integrity of the platform, ensuring buyer satisfaction, and enforcing policies.
+Brief Description:
+    The Report Product feature allows buyers to report issues with products listed on the ecommerce platform, 
+    initiating a resolution process facilitated by administrators.
+Triggers:
+    Buyer identifies a problem with a product.
+    Buyer initiates a report through the platform.
+    Administrator reviews reported issues.
+Basic Flow:
+    Buyer identifies issue: The buyer identifies a problem with a product listed on the platform.
+    Initiate report: The buyer initiates a report through the platform, specifying details of the issue encountered.
+    Review report: The administrator reviews the reported issue, including the nature of the problem and any evidence provided by the buyer.
+    Notify seller: If necessary, the administrator notifies the seller about the reported issue, providing details and requesting a response or resolution.
+    Seller responds: The seller responds to the reported issue, providing clarification, offering a solution, or disputing the claim.
+    Mediation: If required, the administrator mediates the communication between the buyer and the seller to facilitate a resolution.
+    Resolution: A resolution is reached based on the outcome of the communication between the buyer and the seller, which may include refunds, replacements, or other agreed-upon actions.
+    Notify buyer: The buyer is notified about the resolution of the reported issue, including any actions taken.
+
+Use Case Name : Resolve customer complaints      ID :  60        Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+    Administrator: Oversees the management of user reports or complaints within the ecommerce system.
+    Interests: Ensuring customer satisfaction, maintaining the platform's reputation, and upholding policies and regulations.
+    Seller: Individuals or businesses who list products for sale on the ecommerce platform.
+    Interests: Addressing reported issues promptly, maintaining a good reputation, and resolving complaints to retain customer trust.
+    Buyer: Users who shop for products on the ecommerce platform and may raise reports or complaints regarding their shopping experience or purchased items.
+    Interests: Resolving issues encountered during shopping, obtaining refunds or replacements for unsatisfactory products, and ensuring a positive overall experience.
+Brief Description:
+    The Resolve User Reports or Complaints feature allows administrators to address and resolve user-reported issues or 
+    complaints related to purchases or interactions on the ecommerce platform.
+Preconditions:
+    There is at least one reported issue or complaint from a user.
+    The administrator is logged into the system.
+    Sellers and buyers involved in reported issues are registered and active on the platform.
+Triggers:
+    A user submits a report or complaint through the platform.
+    The administrator initiates a review of reported issues or complaints.
+Basic Flow:
+    Receive report or complaint: The administrator receives a report or complaint submitted by a user through the platform.
+    Review reported issue: The administrator reviews the details of the reported issue or complaint, including any evidence provided by the user.
+    Investigate: If necessary, the administrator investigates the reported issue further, gathering additional information from both parties involved.
+    Communicate with parties: The administrator communicates with the involved parties, including the buyer and seller, to gather their perspectives and seek resolutions.
+    Mediation: The administrator acts as a mediator to facilitate communication and negotiation between the parties to reach a satisfactory resolution.
+    Resolution: A resolution is reached based on the outcome of the investigation and mediation process, which may include refunds, replacements, compensation, or other agreed-upon actions.
+    Notify parties: The administrator notifies the involved parties about the resolution of the reported issue or complaint, providing reasons and details of any actions taken.
+
+Use Case Name :  Create Product Offer      ID :  61        Importance Level : High 
+Primary Actor : Store Owners/Book StoreOwners  Type : Primary Use Case
+Stakeholders and Interests :
+    Event Organizer: Manages event planning and execution using the event organization system.
+    Event Staff: Individuals assigned roles to assist in managing and running events.
+    System Administrator: Manages the functionality and configuration of the event organization system.
+Brief Description:
+    The Create Event Staff feature allows event organizers to assign roles and responsibilities to staff members for managing and executing events.
+Basic Flow:
+    Access event management: The event organizer accesses the event management interface within the event organization system.
+    Select event: The event organizer selects the specific event for which they want to create event staff.
+    Navigate to staff management: The event organizer navigates to the staff management section within the event management interface.
+    Add staff member: The event organizer adds a new staff member to the event by providing their details such as name, contact information, and role.
+    Assign role: The event organizer assigns specific roles and responsibilities to the staff member based on their expertise and requirements of the event.
+    Save changes: The event organizer saves the changes, finalizing the assignment of the staff member to the event with their designated role.
+    Notify staff member: The system notifies the staff member about their assignment to the event, providing details of their role and responsibilities.
+    Confirmation: The event organizer receives confirmation that the staff member has been successfully added to the event staff list.
+
+
+Use Case Name : Create event staff members      ID :  62        Importance Level : High 
+Primary Actor : Event Organizer  Type : Primary Use Case
+Stakeholders and Interests :
+    Seller: Individuals or businesses who list products for sale on the ecommerce platform
+    Buyer: Users who shop for products on the ecommerce platform
+    Administrator: Manages the overall functioning of the ecommerce system and oversees product listings and offers.
+Brief Description:
+    The Create Product Offer feature enables sellers to list their products for sale on the ecommerce platform,
+    specifying details such as price, quantity, and shipping options.
+Triggers:
+    Seller initiates the process to list a new product offer.
+    New product inventory becomes available for sale.
+Basic Flow:
+    Access product listing interface: The seller accesses the product listing interface within the ecommerce platform.
+    Select product to offer: The seller selects the product they want to list as an offer from their inventory or adds a new product if necessary.
+    Enter offer details: The seller enters details for the product offer, including title, description, price, quantity available, shipping options, and any applicable discounts or promotions.
+    Set pricing: The seller sets the price for the product offer, considering factors such as cost, market demand, and competition.
+    Specify quantity: The seller specifies the quantity of the product available for sale as part of the offer.
+    Configure shipping: The seller configures shipping options for the product offer, including shipping methods, costs, and delivery times.
+    Review and confirm: The seller reviews the details of the product offer to ensure accuracy and completeness.
+    Submit offer: The seller submits the product offer to the platform for listing and publishing.
+    Confirmation: The seller receives confirmation that the product offer has been successfully listed on the platform.
+
+Use Case Name : Send a gift     ID :  63        Importance Level : High 
+Primary Actor : Customer  Type : Primary Use Case
+Stakeholders and Interests :
+    Buyer: Users who purchase products on the ecommerce platform to send as gifts to others
+    Recipient: Individuals who receive gifts purchased on the ecommerce platform
+    Seller: Individuals or businesses who list and sell products on the ecommerce platform
+    Administrator: Manages the overall functioning of the ecommerce system, including gift-related transactions and logistics.
+Brief Description:
+    The Send Gift feature allows buyers to purchase products on the ecommerce platform and send 
+    them as gifts to recipients, specifying delivery details and personal messages.
+Triggers:
+    Buyer selects the option to send a product as a gift during the checkout process.
+    Buyer initiates the process to send a gift from their account dashboard.
+Basic Flow:
+    Select product: The buyer selects a product available on the ecommerce platform to send as a gift.
+    Choose gift option: During the checkout process, the buyer selects the option to send the selected product as a gift.
+    Enter recipient details: The buyer enters the recipient's name, shipping address, and any additional details required for gift delivery.
+    Add personal message: The buyer has the option to include a personal message or greeting card along with the gift.
+    Select delivery date: The buyer selects the desired delivery date for the gift, if applicable.
+    Confirm order: The buyer confirms the gift order and proceeds with the payment process.
+    Place order: The buyer completes the transaction, placing the order for the gift to be sent to the recipient.
+    Notify recipient: Upon successful order placement, the recipient is notified about the incoming gift delivery, if an email or notification option is available.
+    Fulfillment: The seller processes the order, prepares the gift package, and arranges for shipping to the recipient's address.
+
+Use Case Name : Create author account     ID :  64        Importance Level : High 
+Primary Actor : Author  Type : Primary Use Case
+Stakeholders and Interests :
+    Author: Individuals who write books or other literary works and wish to sell them on the ecommerce platform.
+    Buyer: Users who browse and purchase books or literary works on the ecommerce platform
+Brief Description:
+    The Create Author Account feature enables authors to register and set up their accounts on the ecommerce platform to sell their literary works.
+Triggers:
+    Author initiates the process to create an author account.
+    New author wants to list their literary works for sale on the platform.
+Basic Flow:
+    Access registration page: The author navigates to the registration page on the ecommerce platform.
+    Enter account details: The author enters their personal information, including name, email address, and desired password.
+    Provide contact information: The author provides additional contact information, such as address and phone number.
+    Verify email: The author verifies their email address by clicking on the verification link sent to their email inbox.
+    Submit application: The author submits their account registration application to the platform.
+    Review by administrator: The administrator reviews the author's registration application and verifies the provided information.
+    Approve registration: If the registration application meets all requirements, the administrator approves the creation of the author account.
+    Confirmation: The author receives confirmation that their account has been successfully created and approved.
+
+Use Case Name : View Browsing History     ID :  65        Importance Level : High 
+Primary Actor : Customer   Type : Primary Use Case
+Stakeholders and Interests :
+    User: Individuals who browse products on the ecommerce platform.
+    Administrator: Manages the overall functioning of the ecommerce system, including user account features and data privacy.
+Brief Description:
+    The View Browsing History feature allows users to access and review their past browsing activity on the ecommerce platform.
+Triggers:
+    User selects the option to view their browsing history from their account dashboard.
+    User accesses the browsing history feature through a designated menu or link on the platform.
+Basic Flow:
+    Access browsing history: The user navigates to the browsing history section within their account dashboard.
+    Authenticate: If necessary, the user provides authentication credentials to access their browsing history.
+    Retrieve history: The system retrieves and displays the user's browsing history, including details such as product names, categories, and timestamps.
+    Browse history: The user reviews their past browsing activity, scrolling through the list of products viewed on the platform.
+    Select item: The user selects a specific product from their browsing history to view more details or revisit the product page.
+    Navigate to product page: If desired, the user clicks on the selected product to navigate to its product page for additional information or to make a purchase.
+
+Use Case Name: View Purchase History  ID : 66 Importance Level : High 
+Primary Actor : Customer  Type : Primary Use Case
+Stakeholders and Interests :
+    User: Individuals who have made purchases on the ecommerce platform.
+        Interests: Accessing a record of their past purchases, tracking order statuses, and reviewing details of completed transactions.    
+    Administrator : Manages the overall functioning of the ecommerce system and may oversee features related to user accounts and transaction history
+        Interests: Ensuring user satisfaction, maintaining system integrity, and providing a seamless user experience.
+Brief Description:
+    The View Purchase History feature allows users to access and review a record of their past purchases and transactions made on the ecommerce platform.
+Preconditions:
+    The user has previously made purchases or transactions on the platform.
+Basic Flow:
+    Access purchase history: The user navigates to the purchase history section within their account dashboard.
+    Authenticate: If necessary, the user provides authentication credentials to access their purchase history.
+    Retrieve history: The system retrieves and displays the user's purchase history, including details such as order IDs, item names, quantities, prices, and order statuses.
+    Browse history: The user reviews their past purchases and transactions, scrolling through the list of orders displayed.
+    Select order: The user selects a specific order from their purchase history to view more details or track the order status.
+    View order details: The system presents detailed information about the selected order, including itemized lists of purchased items, shipping details, payment information, and order status updates.
+    Track order status: If the selected order is not yet completed, the user may track its status, including processing, shipping, and delivery updates.
+    Return or request support: If necessary, the user may initiate returns, refunds, or contact customer support for assistance with past orders.
+
+Use Case Name:  Save searches     ID:   67  Importance Level: Medium
+Primary Actor : Customer   
+Stakeholders and Interests :
+    Customer: Wants to efficiently find products of interest and receive notifications when new items matching their criteria are available.
+    eCommerce Platform: Aims to increase user engagement and satisfaction by providing personalized features like saved searches.
+Brief Description:
+    Allows customers to save search queries based on specific criteria and receive notifications when new items matching their search parameters are listed on the eCommerce platform.
+Triggers:
+    Customer initiates a search and decides to save the search criteria for future reference.
+Basic Flow:
+    Customer performs a search for products using specific criteria (e.g., keywords, category, price range).
+    Upon viewing search results, customer decides to save the search by selecting the "Save Search" option.
+    Customer provides a name or label for the saved search to easily identify it later.
+    The eCommerce system saves the search criteria associated with the customer's account.
+    Whenever new items matching the saved search criteria are listed on the platform, the system sends a notification to the customer.
+
+Use Case Name:  Filter Preferences     ID:   68  Importance Level: Medium
+Primary Actor : Customer   
+Stakeholders and Interests :
+    Customer: Wants to tailor their browsing experience by setting specific filters to refine search results according to their preferences.
+        interests - Find desired products more efficiently, save time by eliminating irrelevant search results, have a more personalized shopping experience.
+    eCommerce Platform: Aims to provide a personalized shopping experience, increase user satisfaction, and improve conversion rates by offering advanced filtering options.
+        eCommerce Platform: Enhance user engagement and retention, increase customer loyalty by offering advanced and customizable filtering options.
+    System Administrator: Responsible for managing and maintaining the filter preferences functionality, ensuring it operates smoothly.
+        System Administrator: Ensure that the filter preferences feature is user-friendly, reliable, and meets the needs of customers.
+Brief Description:
+    Allows customers to set and customize filter preferences to refine search results based on specific criteria such as price range, brand, size, color, etc.
+Triggers:
+    Customer initiates a search and desires to refine search results using specific filters.
+Basic Flow:
+    Customer performs a search for products using general keywords or categories.
+    Customer views search results and decides to apply filters to refine the results.
+    Customer selects desired filter criteria such as price range, brand, size, color, etc.
+    The eCommerce system applies the selected filters to the search results.
+    The system displays updated search results based on the applied filters.
+
+Use Case Name:  Saved Sellers    ID: 69  Importance Level: Medium
+Primary Actor : Customer   
+Stakeholders and Interests :
+    Customer: Wants to keep track of favorite sellers and easily access their stores or listings for future purchases.
+        Easily access stores or listings of favorite sellers, receive notifications about new products or promotions from saved sellers, streamline the purchasing process.
+    eCommerce Platform: Aims to enhance user experience, increase customer engagement, and promote repeat purchases by offering features like saved sellers.
+         Increase user retention and loyalty, encourage repeat purchases, provide personalized recommendations based on saved sellers.
+Brief Description:
+    Allows customers to save their favorite sellers on the eCommerce platform, enabling quick access to their stores or listings and receiving updates on new products or promotions.
+Triggers:
+    Customer encounters a seller whose products or services they find appealing and wishes to save them for future reference.
+Basic Flow:
+    While browsing, customer encounters a seller whose products or services they want to save for future reference.
+    Customer navigates to the seller's store or listing page.
+    Customer selects the option to save the seller as a favorite.
+    The eCommerce system saves the seller to the customer's list of saved sellers.
+    Whenever the saved seller adds new products or offers promotions, the system notifies the customer via email or in-app notification.
+    Customer can easily access the list of saved sellers from their account dashboard or a dedicated section on the platform.
+Extensions:
+    Seller Ratings and Reviews: Provide additional information such as seller ratings and reviews to help customers make informed decisions when saving sellers.
+    Customizable Notifications: Allow customers to customize notification preferences for each saved seller (e.g., frequency, notification type).
+    Integration with Wishlist: Enable customers to add products from saved sellers directly to their wishlist for future purchase consideration.
+    Social Sharing: Allow customers to share their list of saved sellers with friends or on social media platforms.
+    Recommendation Engine: Utilize machine learning algorithms to recommend similar sellers based on customer preferences and browsing history.
+
+Use Case Name:  Saved Sizes    ID: 70     Importance Level: Medium
+Primary Actor : Customer   
+Stakeholders and Interests :
+    Customer: Wants to save their clothing or shoe sizes for quick reference when browsing products on the eCommerce platform.
+         Easily access their clothing or shoe sizes, receive personalized recommendations based on saved sizes, save time by filtering out irrelevant products.
+    eCommerce Platform: Aims to enhance user experience, increase customer satisfaction, and streamline the purchasing process by offering features like saved sizes.
+        Increase user engagement and retention, provide tailored product suggestions, improve conversion rates by offering convenient features like saved sizes.\
+Brief Description:
+    Allows customers to save their clothing or shoe sizes on the eCommerce platform, enabling quick filtering of products based on their size preferences.
+Triggers:
+    Customer wants to save their clothing or shoe sizes for quick reference when browsing products.
+Basic Flow:
+    Customer navigates to their account settings or a designated section for saved sizes.
+    Customer selects the option to add a new size.
+    Customer enters their clothing or shoe size for different categories (e.g., tops, bottoms, shoes).
+    The eCommerce system saves the entered sizes to the customer's account.
+    While browsing products, customer applies the saved sizes as filters to refine search results.
+    The system displays products available in the customer's saved sizes.
+
+
+Use Case Name : Create role      ID :  54         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+
+Use Case Name : Create Permission      ID :  54         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+
+Use Case Name : Assign Permission for a role      ID :  54         Importance Level : High 
+Primary Actor : Adminstrator  Type : Primary Use Case
+Stakeholders and Interests :
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ 
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+                              
+
+
+

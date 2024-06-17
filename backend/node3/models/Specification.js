@@ -1,0 +1,5 @@
+inventory_specification
+lukup_specification
+lukup_specification_category
+inventory_specification
+common_specification
